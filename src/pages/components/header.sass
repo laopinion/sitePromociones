@@ -1,2 +1,32 @@
-.header
-  background-color: red
+#header
+  height: 128px
+  background-color: #b92025
+  .header
+    display: grid
+    grid-template-columns: 350px 250px
+    grid-template-rows: 60px 68px
+    // grid-template-areas: "menu buscador" "menu buscador"
+    justify-content: center
+    justify-items: center
+    align-items: center
+    .logo
+      margin: 0
+      height: 60px
+      // grid-area: menu / buscador
+      grid-column: 1 / span 2
+      grid-row: 1
+    .menu
+      padding: 0
+      margin: 0
+      display: grid
+      grid-template-columns: repeat(3, 110px)
+      justify-items: center
+      list-style: none
+      grid-column: 1
+      grid-row: 2
+      // grid-area: menu
+    #form
+      grid-column: span 2
+      grid-row: 2
+      // grid-area: buscador
+  

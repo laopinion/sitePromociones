@@ -14,7 +14,6 @@ class Home extends Component {
     return (
      <HomeLayout>
        <Header />
-       <h4>Hola component home :)</h4>
      </HomeLayout>
     )
   }
