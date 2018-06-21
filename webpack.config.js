@@ -75,6 +75,7 @@ module.exports = (env) => {
         },
       ]
     },
+    mode: 'production',
     plugins
   }
 }

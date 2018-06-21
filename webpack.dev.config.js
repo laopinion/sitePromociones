@@ -1,22 +1,19 @@
 const path = require("path");
-// const webpack = require('webpack');
+const webpack = require('webpack');
 /* css-loaders, style-loader y  extract-text-webpack-plugin */
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+const hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true';
 /* 
   Config Advanced dev
   Nota: siempre hay que copilar webpack la primera vez y luego si correr webpack-dev-server
 */
 module.exports = {
   entry: {
-    home: path.resolve(__dirname, "src/index.jsx"),
+    home: [path.resolve(__dirname, "src/entries/Home.jsx"), hotMiddlewareScript],
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist/public"),
     filename: "js/[name].js"
-  },
-  devServer: {
-    port: 9000
   },
   devtool: "eval-source-map",
   module: {
@@ -65,5 +62,9 @@ module.exports = {
       }
     ]
   },
-  plugins: [new ExtractTextPlugin("css/[name].css")]
+  mode: 'development',
+  plugins: [
+    new ExtractTextPlugin("css/[name].css"),
+    new webpack.HotModuleReplacementPlugin(),
+  ]
 };
