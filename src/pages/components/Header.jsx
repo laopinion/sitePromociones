@@ -19,7 +19,7 @@ const menu = [
 
 const Header = () => {
   return (
-    <header id='header'>
+    <header id='Header'>
       <hr />
       <div className='container header'>
         <figure className='logo'>
