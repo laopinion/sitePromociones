@@ -1,13 +1,13 @@
-import React from 'react';
-import './header.sass';
-import logo from '../../img/op.png';
+import React from 'react'
+import './header.sass'
+import logo from '../../img/op.png'
 
 const Header = () => {
   return (
     <header id='header'>
       <div className='container header'>
         <figure className='logo'>
-          <img src={logo} alt='laopinión'/>
+          <img src={logo} alt='laopinión' />
         </figure>
         <ul className='menu'>
           <li>boton #1</li>
@@ -15,11 +15,11 @@ const Header = () => {
           <li>boton #3</li>
         </ul>
         <form id='form'>
-          <input type="text" placeholder='buscador'/>
+          <input type='text' placeholder='buscador' />
         </form>
       </div>
     </header>
   )
 }
 
-export default Header;
+export default Header

@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import HomeLayout from './components/Home-layout.jsx';
-import Header from './components/Header.jsx';
+import React, { Component } from 'react'
+import HomeLayout from './components/Home-layout.jsx'
+import Header from './components/Header.jsx'
 
 class Home extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
-      modalVisible: false,
+      modalVisible: false
     }
   }
 
-  render() {
+  render () {
     return (
-     <HomeLayout>
-       <Header />
-     </HomeLayout>
+      <HomeLayout>
+        <Header />
+      </HomeLayout>
     )
   }
 }
 
-export default Home;
+export default Home
