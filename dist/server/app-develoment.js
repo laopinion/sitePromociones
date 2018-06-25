@@ -16,17 +16,40 @@ var _path = require('path');
 
 var _path2 = _interopRequireDefault(_path);
 
+var _webpack = require('webpack');
+
+var _webpack2 = _interopRequireDefault(_webpack);
+
+var _webpackDevMiddleware = require('webpack-dev-middleware');
+
+var _webpackDevMiddleware2 = _interopRequireDefault(_webpackDevMiddleware);
+
+var _webpackDevConfig = require('../webpack.dev.config.js');
+
+var _webpackDevConfig2 = _interopRequireDefault(_webpackDevConfig);
+
+var _webpackHotMiddleware = require('webpack-hot-middleware');
+
+var _webpackHotMiddleware2 = _interopRequireDefault(_webpackHotMiddleware);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import ReactDOMServer from 'react-dom/server'
 
 // import React from 'react'
-var app = (0, _express2.default)();
+var app = (0, _express2.default)(); // const express = require('express');
 
-// import Home from './views/Home'
+
+var compiler = (0, _webpack2.default)(_webpackDevConfig2.default);
+
+app.use((0, _webpackDevMiddleware2.default)(compiler, {
+  publicPath: '/',
+  quiet: true
+}));
+
+app.use((0, _webpackHotMiddleware2.default)(compiler));
 
 // definimos el engine para archivos jsx
-// const express = require('express');
 app.engine('.js', _reactEngine2.default.server.create());
 // configuramos la ruta a las vistas
 app.set('views', _path2.default.resolve(__dirname, 'views'));

@@ -4,9 +4,21 @@ import express from 'express'
 import engine from 'react-engine'
 import path from 'path'
 // import ReactDOMServer from 'react-dom/server'
+import webpack from 'webpack'
+import webpackDevMiddleware from 'webpack-dev-middleware'
+import webpackDevConf from '../webpack.dev.config.js'
+import webpackHotMiddleware from 'webpack-hot-middleware'
+
 const app = express()
 
-// import Home from './views/Home'
+const compiler = webpack(webpackDevConf)
+
+app.use(webpackDevMiddleware(compiler, {
+  publicPath: '/',
+  quiet: true
+}))
+
+app.use(webpackHotMiddleware(compiler))
 
 // definimos el engine para archivos jsx
 app.engine('.js', engine.server.create())

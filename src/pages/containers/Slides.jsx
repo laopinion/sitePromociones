@@ -11,14 +11,14 @@ const slides = [
     }
   },
   {
-    src: 'https://cdn.pixabay.com/photo/2016/02/20/21/41/vegetables-1212845_960_720.jpg',
+    src: 'https://images.pexels.com/photos/1110656/pexels-photo-1110656.jpeg?cs=srgb&dl=calm-clear-water-clouds-1110656.jpg&fm=jpg',
     title: 'slide-2',
     styles: {
       display: 'none'
     }
   },
   {
-    src: slideOne,
+    src: 'https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     title: 'slide-3',
     styles: {
       display: 'none'
@@ -26,7 +26,11 @@ const slides = [
   }
 ]
 
-let slideIndex = 1
+/*
+  img de pruebas -> https://www.pexels.com/
+*/
+
+// let slideIndex = 1
 
 class Slides extends Component {
   constructor (props) {
@@ -63,8 +67,6 @@ class Slides extends Component {
     return (
       <SlidesLayout>
         <ul>
-          <button className='left' onClick={this.plusSlides.bind(this, -1)}>&#10094;</button>
-          <button className='right' onClick={this.plusSlides.bind(this, 1)}>&#10095;</button>
           {
             slides.map((item, index) => {
               return (
@@ -74,6 +76,10 @@ class Slides extends Component {
               )
             })
           }
+          <div className='container btn_slides'>
+            <button className='btn left' onClick={this.plusSlides.bind(this, -1)}>&#10094;</button>
+            <button className='btn right' onClick={this.plusSlides.bind(this, 1)}>&#10095;</button>
+          </div>
         </ul>
       </SlidesLayout>
     )

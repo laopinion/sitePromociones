@@ -1,10 +1,10 @@
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = (env) => {
   const plugins = [
-    new ExtractTextPlugin("css/[name].[hash].css")
+    new ExtractTextPlugin('css/[name].css')
   ]
 
   if (env.NODE_ENV === 'production') {
@@ -15,17 +15,11 @@ module.exports = (env) => {
 
   return {
     entry: {
-      home: path.resolve(__dirname, 'src/entries/home.js'),
-      redux: path.resolve(__dirname, 'src/entries/redux.js'),
+      home: path.resolve(__dirname, 'src/entries/Home.jsx')
     },
     output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: 'js/[name].[hash].js',
-      publicPath: path.resolve(__dirname, 'dist') + "/",
-      chunkFilename: 'js/[id].[chunkhash].js',
-    },
-    devServer: {
-      port: 9000,
+      path: path.resolve(__dirname, 'dist/public'),
+      filename: 'js/[name].js'
     },
     module: {
       rules: [
@@ -37,9 +31,9 @@ module.exports = (env) => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['es2015', 'react', 'stage-2'],
+              presets: ['es2015', 'react', 'stage-2']
             }
-          },
+          }
         },
         {
           test: /\.css$/,
@@ -48,7 +42,7 @@ module.exports = (env) => {
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: true,
+                  minimize: true
                 }
               }
             ]
@@ -60,19 +54,20 @@ module.exports = (env) => {
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: ['css-loader', 'sass-loader']
-          }),
+          })
         },
         {
           test: /\.(jpg|png|gif|svg)$/,
           use: {
             loader: 'url-loader',
             options: {
-              limit: 10000,
+              limit: 1000000,
               fallback: 'file-loader',
               name: 'images/[name].[hash].[ext]',
+              publicPath: '/'
             }
           }
-        },
+        }
       ]
     },
     mode: 'production',
