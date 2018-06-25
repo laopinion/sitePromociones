@@ -1,0 +1,81 @@
+@import 'colores'
+#Products
+  margin-top: 100px
+  display: grid
+  grid-auto-flow: row
+  .header
+    position: relative
+    margin-bottom: 30px
+    .title
+      color: $rojo_2
+      margin: 0 auto
+      text-align: center
+      font-size: 16px
+      font-weight: 700
+      background-color: #ffffff
+      width: 160px
+    hr
+      position: absolute
+      top: 5px
+      z-index: -1
+      border: none
+      height: 2px
+      background-color: $rojo_4
+      width: 100%
+  // .header:nth-of-type(1)
+  //   display: grid-inline
+  .Product
+    display: grid
+    grid-template-columns: 470px 1fr
+    grid-template-rows: 1fr 50px
+    hr
+      margin: 0 auto
+      height: 2px
+      background-color: $rojo_4
+      border: none
+      grid-column: 1 / span 2
+      align-self: center
+      width: 748px
+    figure
+      margin: 0
+      img
+        max-width: 100%
+    .info
+      grid-column: 2
+      .title, .description
+        color: $gris_1
+      .title
+        font-weight: 700
+        margin: 0 0 22px
+      .description
+        font-weight: 400
+      .btn_buy
+        height: 42px
+        background-color: $rojo_1
+        text-transform: uppercase
+        border: none
+        margin: 0 auto
+        display: block
+        cursor: pointer
+        position: relative
+        width: 380px
+        &:after
+          content: ""
+          border-bottom: 1px solid $rojo_2
+          border-right: 1px solid $rojo_2
+          border-left: 1px solid $rojo_2
+          position: absolute
+          bottom: -5px
+          left: -5px
+          height: 15px
+          width: 102%
+        a
+          color: #ffffff
+          display: flex
+          text-decoration: none
+          justify-content: center
+          align-items: center
+          height: 100%
+    &:last-child 
+      hr
+        background-color: #ffffff

@@ -5,17 +5,19 @@
     padding: 0
     list-style: none
     img
+      animation: opacity 0.8s ease-out
       width: 100%
     .btn_slides
       position: relative
       .btn
         position: absolute
         top: -40px
-        text-indent: -999px;
+        text-indent: -9999px
         border: none
         height: 32px
         padding: 0
         cursor: pointer
+        outline: none
         width: 32px
       .left
         left: 0
@@ -23,3 +25,31 @@
       .right
         right: 0
         background: url('../../img/btn_der.png') no-repeat
+    .badges
+      position: absolute
+      bottom: 10px
+      left: 0
+      right: 0
+      margin: 0 auto
+      display: flex
+      justify-content: space-around
+      width: 70px
+      .badge
+        height: 18px
+        padding: 0
+        cursor: pointer
+        background: url('../../img/icon_slide.png') no-repeat 50%
+        width: 17px
+        &:hover
+          // background-color: #ffffff
+          background: url('../../img/icon_slide_active.png') no-repeat 50%
+      .active
+        // background-color: #ffffff
+        background: url('../../img/icon_slide_active.png') no-repeat 50%
+
+@keyframes opacity
+  from 
+    opacity: 0
+  
+  to 
+    opacity: 1
