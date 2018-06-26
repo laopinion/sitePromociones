@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import HomeLayout from './components/Home-layout.jsx'
-import Header from './components/Header.jsx'
-import Slides from './containers/Slides.jsx'
-import Products from './containers/Products.jsx'
-import Footer from './containers/Footer.jsx'
+import HomeLayout from '../components/Home-layout.jsx'
+import Header from '../../header/components/Header.jsx'
+import Slides from '../../slides/containers/Slides.jsx'
+import Products from '../../products/containers/Products.jsx'
+import Footer from '../../footer/containers/Footer.jsx'
 
 class Home extends Component {
   constructor (props) {

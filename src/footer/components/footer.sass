@@ -1,0 +1,155 @@
+@import '../../colores'
+#Footer
+  background-color: $rojo_2
+  .footer
+    padding: 50px 0
+    .header
+      position: relative
+      margin: 0 auto 30px auto
+      width: 96%
+      z-index: 0
+      .title
+        color: #ffffff
+        margin: 0 auto
+        text-align: center
+        font-size: 16px
+        font-weight: 400
+        background-color: $rojo_2
+        width: 80px
+      hr
+        position: absolute
+        top: 5px
+        z-index: -1
+        border: none
+        height: 1px
+        background-color: #ffffff
+        width: 100%
+    .contactenos
+      display: grid
+      grid-template-columns: repeat(2, 480px)
+      justify-content: space-between
+      margin-bottom: 75px
+      #formContactenos
+        justify-self: center
+        width: 386px
+        .form
+          display: grid
+          justify-self: center
+          margin-bottom: 25px
+          label
+            color: #ffffff
+            font-weight: 400
+            font-size: 14px
+          input
+            border: none
+            background: transparent
+            border-bottom: 1px solid #ffffff
+            border-left: 1px solid #ffffff
+            border-right: 1px solid #ffffff
+            margin-bottom: 5px
+            height: 19px
+            width: 100%
+          .enviar
+            border: none
+            padding: 0
+            height: 26px
+            width: 379px
+            margin: 0 auto
+            background-color: $rojo_1
+            position: relative
+            color: white
+            cursor: pointer
+            &:after
+              content: ""
+              position: absolute
+              bottom: -5px
+              border-bottom: 1px solid #ffffff
+              border-left: 1px solid #ffffff
+              border-right: 1px solid #ffffff
+              height: 19px
+              left: -5px
+              width: 102%
+            &:active
+              transform: scale(0.8)
+        .terminos
+          display: flex
+          color: #ffffff
+          input
+            height: 22px
+            margin-right: 5px
+            width: 22px
+      .telefonos_logos
+        display: grid
+        justify-items: center
+        .row-1
+          width: 83%
+          p
+            margin: 0
+            color: #ffffff
+            font-size: 14px
+            margin-top: 10px
+          figure
+            margin: 0
+        .row-2
+          width: 83%
+          figure
+            margin: 0
+          h4
+            margin: 0
+            color: #ffffff
+            text-align: center
+            margin-bottom: 10px
+            font-weight: 400
+          .logos
+            display: flex
+            justify-content: space-between
+    .info
+      display: grid
+      grid-template-columns: 177px 25px 1fr  25px 162px
+      justify-items: center
+      align-items: center
+      border: 1px solid #ffffff
+      hr
+        height: 77px
+        border: none
+        background-color: white
+        width: 1px
+      figure
+        margin: 0
+      p
+        margin: 0
+        font-size: 11px
+        color: #ffffff
+      .redes
+        display: grid
+        justify-items: center
+        h4
+          margin: 0
+          color: #ffffff
+          text-transform: uppercase
+        ul
+          padding: 0
+          list-style: none
+          margin: 0
+          display: grid
+          grid-template-columns: repeat(4, 32px)
+          justify-content: space-between
+          width: 130px
+          li
+            height: 32px
+            text-indent: -9999px
+            width: 32px
+          a
+            display: block
+            height: 100%
+          .facebook
+            background: url('../../img/redes.png') no-repeat
+          .twitter
+            background: url('../../img/redes.png') no-repeat
+            background-position-x: -33px
+          .instagram
+            background: url('../../img/redes.png') no-repeat
+            background-position-x: -66px
+          .youtube
+            background: url('../../img/redes.png') no-repeat
+            background-position-x: -99px
