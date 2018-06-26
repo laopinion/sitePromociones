@@ -23,7 +23,9 @@ const Header = () => {
       <hr />
       <div className='container header'>
         <figure className='logo'>
-          <img src={logo} alt='laopinión' />
+          <a href='https://laopinion.com.co' target='_blanck'>
+            <img src={logo} alt='laopinión' />
+          </a>
         </figure>
         <ul className='menu'>
           {menu.map((item, index) => {
