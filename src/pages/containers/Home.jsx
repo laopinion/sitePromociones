@@ -18,7 +18,7 @@ class Home extends Component {
       <HomeLayout>
         <Header />
         <Slides />
-        <Products />
+        <Products products={this.props.products} />
         <Footer />
       </HomeLayout>
     )

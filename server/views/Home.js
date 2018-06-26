@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import Layout from './layouts/default';
+import React, { Component } from 'react'
+import Layout from './layouts/default'
 
 class Home extends Component {
-  render() {
+  render () {
     return (
-      <Layout title='Homepage'>
+      <Layout title='Homepage' page='home'>
         <section id='app' />
       </Layout>
-    );
+    )
   }
 }
 
-export default Home;
+export default Home
 // module.exports = Home;

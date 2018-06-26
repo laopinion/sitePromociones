@@ -19,7 +19,7 @@ const FormFooter = (props) => {
         <button className='enviar'>Enviar</button>
       </div>
       <div className='terminos'>
-        <input type='checkbox' name='terminos' value='Acepto de los terminos' id='terminos' />
+        <input type='checkbox' name='terminos' value='Acepto de los terminos' id='terminos' required />
         <label htmlFor='terminos'>Acepto de los terminos</label>
       </div>
     </form>

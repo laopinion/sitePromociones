@@ -40,9 +40,17 @@ app.get('/', (req, res) => {
   res.render('Home')
 })
 
-app.get('/prueba', (req, res) => {
-  res.render('Prueba', { name: 'React' })
+app.get('/producto/:id', (req, res) => {
+  // console.log(req.params.id)
+  const data = {
+    id: req.params.id
+  }
+  res.render('Product', data)
 })
+
+// app.get('/prueba', (req, res) => {
+//   res.render('Prueba', { name: 'React' })
+// })
 
 export default app
 // module.exports = app;

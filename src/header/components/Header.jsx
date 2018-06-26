@@ -23,7 +23,7 @@ const Header = () => {
       <hr />
       <div className='container header'>
         <figure className='logo'>
-          <a href='https://laopinion.com.co' target='_blanck'>
+          <a href='/'>
             <img src={logo} alt='laopinión' />
           </a>
         </figure>

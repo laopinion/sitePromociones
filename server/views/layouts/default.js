@@ -1,26 +1,26 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 // acá definimos el layout de nuestro HTML donde están los tags html, head, body, etc.
 class Layout extends Component {
-  render() {
+  render () {
     return (
-      <html lang="es">
+      <html lang='es'>
         <head>
-          <meta charSet="UTF-8" />
+          <meta charSet='UTF-8' />
           <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+            name='viewport'
+            content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
           />
           <title>{this.props.title}</title>
-          <link rel="stylesheet" href="/css/home.css" />
+          <link rel='stylesheet' href={`/css/${this.props.page}.css`} />
         </head>
         <body>
           {this.props.children}
-          <script src="/js/home.js" />
+          <script src={`/js/${this.props.page}.js`} />
         </body>
       </html>
-    );
+    )
   }
 }
 
-export default Layout;
+export default Layout

@@ -10,7 +10,7 @@ const Product = (props) => {
         <h4 className='title'>{props.title}</h4>
         <p className='description'>{props.description}</p>
         <button className='btn_buy'>
-          <a href={props.id}>Comprar</a>
+          <a href={`/producto/${props.id}`}>Comprar</a>
         </button>
       </div>
       <hr />

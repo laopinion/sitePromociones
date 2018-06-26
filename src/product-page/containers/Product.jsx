@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ProductsLayout from '../components/Products-layout.jsx'
-import Product from '../components/Product.jsx'
+import ProductLayout from '../components/Product-layout.jsx'
+import ProductDestacado from '../components/Procuct-destacado.jsx'
 
 class Products extends Component {
   constructor (props) {
@@ -12,13 +12,13 @@ class Products extends Component {
 
   render () {
     return (
-      <ProductsLayout>
+      <ProductLayout>
         {
           this.props.products.map((item, index) => {
-            return <Product key={index} {...item} />
+            return <ProductDestacado key={index} {...item} />
           })
         }
-      </ProductsLayout>
+      </ProductLayout>
     )
   }
 }
