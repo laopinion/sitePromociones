@@ -1,5 +1,4 @@
 import React from 'react'
-import './product.sass'
 
 const ProductDestacado = (props) => {
   return (

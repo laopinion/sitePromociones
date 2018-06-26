@@ -1,5 +1,5 @@
 import React from 'react'
-import './product.sass'
+import './products.sass'
 
 const ProductLayout = (props) => {
   return (
