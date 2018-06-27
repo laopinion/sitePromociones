@@ -37,7 +37,8 @@ const Header = () => {
           })}
         </ul>
         <form id='form'>
-          <input type='text' placeholder='buscador' />
+          <input id='search' type='text' />
+          <i className='lupa' />
         </form>
       </div>
     </header>

@@ -1,6 +1,7 @@
 import React from 'react'
 import './footer.sass'
 import tel from '../../img/tel.png'
+import telMovil from '../../img/movil/tel.png'
 import deleitese from '../../img/deleitese.png'
 import op from '../../img/opinion.png'
 import qhubo from '../../img/qhubo.png'
@@ -19,7 +20,8 @@ const FooterLayout = (props) => {
           <div className='telefonos_logos'>
             <div className='row-1'>
               <figure>
-                <img src={tel} alt='Teléfonos' />
+                <img className='desktop' src={tel} alt='Teléfonos' />
+                <img className='movil' src={telMovil} alt='Teléfonos' />
               </figure>
               <p>Para saber más acerca de nuestros productos y promocionales llámanos a nuestra línea de atención al cliente.</p>
             </div>

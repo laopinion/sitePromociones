@@ -13,6 +13,7 @@
     right: 0
     margin: 0 auto
     max-width: 1000px
+    width: 300px
   .header
     display: grid
     grid-template-columns: 422px 250px
@@ -47,11 +48,43 @@
     #form
       grid-column: span 2
       grid-row: 2
+      position: relative
       // grid-area: buscador
       input
         background: transparent
         border: none
         color: white
         border-bottom: 1px solid black
+        outline: none
         width: 100%
+        &:focus ~ .lupa
+          background: transparent
+      .lupa
+        content: " "
+        background: url('../../img/lupa.png')
+        height: 22px
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 22px
+
+@media screen and (max-width: 768px)
+  #Header
+    height: auto
+    padding-bottom: 20px
+    .header
+      grid-template-columns: 300px
+      justify-items: center
+      justify-content: center
+      .logo
+        margin: 0
+      .menu
+        justify-items: center
+        grid-template-columns: repeat(3, 68px)
+        font-size: 14px
+      #form
+        grid-row: 3
+        justify-self: start
+        margin-left: 32px
+        width: 89%
   

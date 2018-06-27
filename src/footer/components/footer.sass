@@ -90,6 +90,8 @@
             margin-top: 10px
           figure
             margin: 0
+            .movil
+              display: none
         .row-2
           width: 83%
           figure
@@ -153,3 +155,57 @@
           .youtube
             background: url('../../img/redes.png') no-repeat
             background-position-x: -99px
+
+@media screen and (max-width: 768px)
+  #Footer .footer 
+    .contactenos
+      grid-template-columns: 1fr
+      grid-gap: 40px 0
+      #formContactenos 
+        .form 
+          .enviar
+            height: 42px
+        .terminos input
+          height: 42px
+          width: 42px
+      .telefonos_logos
+        grid-gap: 20px 0
+        .row-1
+          width: 100%
+          figure
+            margin: 0 auto
+            width: 398px
+          p
+            margin: 10px auto 0
+            width: 398px
+    .info
+      grid-template-columns: 1fr
+      margin: 0 auto
+      padding: 20px
+      box-sizing: border-box
+      grid-gap: 40px 0
+      width: 90%
+      hr
+        display: none
+      .redes
+        grid-row: 1
+    
+@media screen and (max-width: 480px)
+  #Footer .footer
+    .info
+      grid-gap: 20px 0
+    .contactenos 
+      #formContactenos
+        width: 90%
+        .form .enviar
+          width: 100%
+      .telefonos_logos .row-1 
+        figure
+          width: 300px
+          .movil
+            display: block
+            margin: 0 auto
+          .desktop
+            display: none
+        p
+          width: 300px

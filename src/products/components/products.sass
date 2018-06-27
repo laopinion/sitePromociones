@@ -79,3 +79,28 @@
     &:last-child 
       hr
         background-color: #ffffff
+
+@media screen and (max-width: 768px)
+  #Products
+    grid-gap: 50px 0
+    .header
+      margin: 0
+    .Product
+      grid-template-columns: 1fr
+      grid-template-rows: auto
+      justify-items: center
+      grid-gap: 30px 0
+      hr
+        width: 100%
+      figure
+        width: 300px
+      .info
+        grid-column: 1
+        width: 90%
+@media screen and (max-width: 480px)
+  #Products 
+    .Product
+      .info .btn_buy
+        width: 100%
+      &:last-child
+        margin-bottom: 110px

@@ -1,7 +1,16 @@
 import destacado from '../img/destacado.jpg'
-import slide from '../img/slide-1.jpg'
+import slideOne from '../img/slide-1.jpg'
 import subProduct01 from '../img/sub_product_01.jpg'
 import subProduct02 from '../img/sub_product_02.jpg'
+import slideOneMovil from '../img/movil/slide-1.jpg'
+
+const screenWith = window.innerWidth
+let slide1 = slideOne
+let slide2 = slideOne
+
+if (screenWith <= 480) {
+  slide1 = slideOneMovil
+}
 
 const listProducts = [
   {
@@ -9,7 +18,7 @@ const listProducts = [
     src: destacado,
     title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit product 001.',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nihil perspiciatis, dolorem expedita doloribus praesentium iusto obcaecati soluta. Optio facere consequatur atque eligendi hic totam fugit esse cupiditate alias ab!',
-    slide: slide,
+    slide: slide1,
     subproducts: [
       {
         id: '0001',
@@ -48,7 +57,7 @@ const listProducts = [
     src: destacado,
     title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nihil perspiciatis, dolorem expedita doloribus praesentium iusto obcaecati soluta. Optio facere consequatur atque eligendi hic totam fugit esse cupiditate alias ab!',
-    slide: slide,
+    slide: slide1,
     subproducts: [
       {
         id: '0001',
@@ -77,7 +86,7 @@ const listProducts = [
     src: destacado,
     title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit product 003.',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nihil perspiciatis, dolorem expedita doloribus praesentium iusto obcaecati soluta. Optio facere consequatur atque eligendi hic totam fugit esse cupiditate alias ab!',
-    slide: slide,
+    slide: slide2,
     subproducts: [
       {
         id: '0001',
