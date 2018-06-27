@@ -8,11 +8,11 @@ import Footer from '../../footer/containers/Footer.jsx'
 class ProductPage extends Component {
   constructor (props) {
     super(props)
-    const $app = document.getElementById('app')
-    const id = $app.dataset.product_id
+    // const $app = document.getElementById('app')
+    // const id = $app.dataset.product_id
     this.state = {
-      modalVisible: false,
-      product_id: id
+      modalVisible: false
+      // product_id: id
     }
   }
 
@@ -22,14 +22,14 @@ class ProductPage extends Component {
         <Header />
         {
           this.props.products.map((item, index) => {
-            if (item.id === this.state.product_id) {
+            if (item.id === this.props.product_id) {
               return <SlideProduct key={index} {...item} />
             }
           })
         }
         {
           this.props.products.map((item, index) => {
-            if (item.id === this.state.product_id) {
+            if (item.id === this.props.product_id) {
               return <Product key={index} products={item.subproducts} />
             }
           })

@@ -69,9 +69,17 @@ app.get('/', function (req, res) {
   res.render('Home');
 });
 
-app.get('/prueba', function (req, res) {
-  res.render('Prueba', { name: 'React' });
+app.get('/producto/:id', function (req, res) {
+  // console.log(req.params.id)
+  var data = {
+    id: req.params.id
+  };
+  res.render('Product', data);
 });
+
+// app.get('/prueba', (req, res) => {
+//   res.render('Prueba', { name: 'React' })
+// })
 
 exports.default = app;
 // module.exports = app;

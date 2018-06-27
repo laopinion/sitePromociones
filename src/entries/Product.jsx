@@ -8,6 +8,7 @@ import './normalize.css'
 import './app.sass'
 
 const App = document.getElementById('app')
+const id = App.dataset.product_id
 
 // ReactDOM.render(<Media />, App);
-render(<Product products={listProducts} />, App)
+render(<Product products={listProducts} product_id={id} />, App)
