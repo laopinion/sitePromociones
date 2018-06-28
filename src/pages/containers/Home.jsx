@@ -16,7 +16,7 @@ class Home extends Component {
   render () {
     return (
       <HomeLayout>
-        <Header />
+        <Header products={this.props.products} />
         <Slides />
         <Products products={this.props.products} />
         <Footer />

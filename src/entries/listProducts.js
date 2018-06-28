@@ -22,33 +22,39 @@ const listProducts = [
     subproducts: [
       {
         id: '0001',
-        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-001.',
-        src: subProduct01
+        title: 'Prueba product',
+        src: subProduct01,
+        id_parent: '001'
       },
       {
         id: '0002',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
-        src: subProduct02
+        src: subProduct02,
+        id_parent: '001'
       },
       {
         id: '0003',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.',
-        src: subProduct01
+        src: subProduct01,
+        id_parent: '001'
       },
       {
         id: '0004',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.',
-        src: subProduct02
+        src: subProduct02,
+        id_parent: '001'
       },
       {
         id: '0005',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-005.',
-        src: subProduct01
+        src: subProduct01,
+        id_parent: '001'
       },
       {
         id: '0006',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-006.',
-        src: subProduct02
+        src: subProduct02,
+        id_parent: '001'
       }
     ]
   },
@@ -62,22 +68,26 @@ const listProducts = [
       {
         id: '0001',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-001.',
-        src: subProduct01
+        src: subProduct01,
+        id_parent: '002'
       },
       {
         id: '0002',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-001.',
-        src: subProduct02
+        src: subProduct02,
+        id_parent: '002'
       },
       {
         id: '0003',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-001.',
-        src: subProduct01
+        src: subProduct01,
+        id_parent: '002'
       },
       {
         id: '0004',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-001.',
-        src: subProduct02
+        src: subProduct02,
+        id_parent: '002'
       }
     ]
   },
@@ -91,22 +101,26 @@ const listProducts = [
       {
         id: '0001',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-001.',
-        src: subProduct01
+        src: subProduct01,
+        id_parent: '002'
       },
       {
         id: '0002',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
-        src: subProduct02
+        src: subProduct02,
+        id_parent: '002'
       },
       {
         id: '0003',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.',
-        src: subProduct01
+        src: subProduct01,
+        id_parent: '002'
       },
       {
         id: '0003',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.',
-        src: subProduct02
+        src: subProduct02,
+        id_parent: '002'
       }
     ]
   }

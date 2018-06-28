@@ -1,4 +1,5 @@
 import React from 'react'
+import Search from '../containers/Search.jsx'
 import './header.sass'
 import logo from '../../img/op.png'
 
@@ -17,7 +18,7 @@ const menu = [
   }
 ]
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header id='Header'>
       <hr />
@@ -36,10 +37,11 @@ const Header = () => {
             )
           })}
         </ul>
-        <form id='form'>
+        {/* <form id='form'>
           <input id='search' type='text' />
           <i className='lupa' />
-        </form>
+        </form> */}
+        <Search listProducts={props.products} />
       </div>
     </header>
   )

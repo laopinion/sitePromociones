@@ -1,0 +1,40 @@
+import React from 'react'
+
+const Search = (props) => {
+  return (
+    <form
+      id='form'
+      className='Search'
+      onSubmit={props.handleSubmit}
+    >
+      {/* <input id='search' type='text' /> */}
+      <input
+        id='search'
+        ref={props.setRef}
+        type='text'
+        className='Search-input'
+        name='search'
+        onChange={props.handleChange}
+        value={props.value}
+      />
+      <i className='lupa' style={props.value ? { display: 'none' } : { display: 'block' }} />
+      <div className='resultSearch' style={props.styles}>
+        <ul>
+          {props.dataSearch.map((item, index) => {
+            return (
+              <li key={index}>
+                <h3>
+                  <a href={`/producto/${item.id_parent}`}>
+                    {item.title}
+                  </a>
+                </h3>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </form>
+  )
+}
+
+export default Search
