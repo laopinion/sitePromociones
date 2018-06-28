@@ -90,3 +90,40 @@
           height: 35px
           display: block
           width: 43px
+@media screen and (max-width: 768px)
+  #SubProducts
+    grid-template-columns: 1fr
+    .header
+      grid-column: 1
+    .product
+      figure
+        justify-self: center
+        width: 90%
+        img
+          width: 100%
+      h3
+        justify-self: center
+      .btns
+        justify-content: space-evenly
+        .buy
+          width: 198px
+          &:after
+            width: 104%
+        .car
+          // text-indent: -9999px
+          font: 0/0 a
+          width: 82px
+          &:after
+            width: 110%
+@media screen and (max-width: 480px)
+  #SubProducts .product 
+    figure
+      width: 300px
+    h3
+      width: 299px
+    .btns
+      justify-content: space-around
+      .buy
+        width: 195px
+      .car
+        width: 80px

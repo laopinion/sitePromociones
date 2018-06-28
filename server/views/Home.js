@@ -4,7 +4,7 @@ import Layout from './layouts/default'
 class Home extends Component {
   render () {
     return (
-      <Layout title='Homepage' page='home'>
+      <Layout title='Home' page='home'>
         <section id='app' />
       </Layout>
     )
