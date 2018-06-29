@@ -10,13 +10,16 @@ class SearchContainer extends Component {
       styles: {
         display: 'none',
         overflowY: 'initial'
+      },
+      stylesClose: {
+        display: 'none'
       }
     }
   }
 
   handleSubmit = (event) => {
     event.preventDefault()
-    console.log(this.input.value, 'submit')
+    // console.log(this.input.value, 'submit')
     // Aca se puede enviar todos los datos con un post
     const results = []
     this.props.listProducts.map((product) => {
@@ -42,11 +45,23 @@ class SearchContainer extends Component {
       }
     })
 
-    const height = document.querySelector('.resultSearch').offsetHeight
-    console.log(height)
-    if (height >= '399') {
+    if (results.length > 0) {
       this.setState({
-        overflow: {
+        stylesClose: {
+          display: 'block'
+        }
+      })
+    } else {
+      this.setState({
+        stylesClose: {
+          display: 'none'
+        }
+      })
+    }
+
+    if (results.length > 5) {
+      this.setState({
+        styles: {
           overflowY: 'scroll'
         }
       })
@@ -60,8 +75,66 @@ class SearchContainer extends Component {
   }
 
   handleInputChange = (event) => {
+    // this.setState({
+    //   value: event.target.value.replace(' ', '-')
+    // })
+
+    const results = []
+    this.props.listProducts.map((product) => {
+      // console.log(category)
+      product.subproducts.filter((item) => {
+        // console.log(item);
+        const title = item.title.toLowerCase()
+        const query = this.input.value.toLowerCase()
+        if (query !== '') {
+          if (title.includes(query)) {
+            // console.log(item);
+            results.push(item)
+          }
+        }
+        // return author.includes(query);
+        // return item.author.includes(action.payload.query)
+      })
+    })
     this.setState({
-      value: event.target.value.replace(' ', '-')
+      results,
+      styles: {
+        display: 'block'
+      },
+      value: this.input.value
+    })
+
+    if (results.length > 0) {
+      this.setState({
+        stylesClose: {
+          display: 'block'
+        }
+      })
+    } else {
+      this.setState({
+        stylesClose: {
+          display: 'none'
+        }
+      })
+    }
+
+    if (results.length > 5) {
+      this.setState({
+        styles: {
+          overflowY: 'scroll'
+        }
+      })
+    }
+  }
+
+  handleClose = () => {
+    this.setState({
+      styles: {
+        display: 'none'
+      },
+      stylesClose: {
+        display: 'none'
+      }
     })
   }
 
@@ -74,7 +147,8 @@ class SearchContainer extends Component {
         value={this.state.value}
         dataSearch={this.state.results}
         styles={this.state.styles}
-        overflow={this.state.overflow}
+        stylesClose={this.state.stylesClose}
+        handleClose={this.handleClose}
       />
     )
   }

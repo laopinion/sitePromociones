@@ -7,7 +7,6 @@ const Search = (props) => {
       className='Search'
       onSubmit={props.handleSubmit}
     >
-      {/* <input id='search' type='text' /> */}
       <input
         id='search'
         ref={props.setRef}
@@ -33,6 +32,7 @@ const Search = (props) => {
           })}
         </ul>
       </div>
+      <aside className='close' style={props.stylesClose} onClick={props.handleClose} >X</aside>
     </form>
   )
 }

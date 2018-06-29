@@ -73,7 +73,7 @@ const listProducts = [
       },
       {
         id: '0002',
-        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-001.',
+        title: 'Balones',
         src: subProduct02,
         id_parent: '002'
       },

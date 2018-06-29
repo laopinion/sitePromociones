@@ -75,6 +75,7 @@
         // overflow-y: scroll
         background: $rojo_1
         width: 100%
+        z-index: 10
         ul
           list-style: none
           margin: 0
@@ -84,6 +85,22 @@
           a
             text-decoration: none
             color: #ffffff
+        &::-webkit-scrollbar
+          width: 0.5em
+        &::-webkit-scrollbar-track
+          box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+        &::-webkit-scrollbar-thumb 
+          background-color: $gris_1
+          outline: 1px solid $gris_1
+      .close
+        position: absolute
+        top: 35px
+        right: 12px
+        cursor: pointer
+        font-size: 20px
+        font-weight: 700
+        color: #ffffff
+        z-index: 11
 
 
 @media screen and (max-width: 768px)

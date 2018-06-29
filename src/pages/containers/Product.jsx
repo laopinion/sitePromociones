@@ -19,7 +19,7 @@ class ProductPage extends Component {
   render () {
     return (
       <ProductLayout>
-        <Header />
+        <Header products={this.props.products} />
         {
           this.props.products.map((item, index) => {
             if (item.id === this.props.product_id) {
