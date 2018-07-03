@@ -77,7 +77,7 @@ app.post('/subscription-email', (req, res) => {
     .then((response) => {
       // console.log(response.status)
       if (response.status < 300) {
-        res.status(200).send({ message: 'Gracias por contactarnos.', status: 200 })
+        res.status(200).send({ message: 'Gracias por subscribirse.', status: 200 })
       } else {
         res.status(400).send({ message: 'Algo salio mal intentalo mas tarde.', status: 400 })
       }

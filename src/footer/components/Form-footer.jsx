@@ -23,6 +23,11 @@ const FormFooter = (props) => {
         <input type='checkbox' name='terminos' value='Acepto los términos y condiciones y he leído la política de tratamiento de los datos personales' id='terminos' required />
         <label htmlFor='terminos'>Acepto los términos y condiciones y he leído la política de tratamiento de los datos personales</label>
       </div>
+      <p className='messageRequest'>
+        {
+          props.message
+        }
+      </p>
     </form>
   )
 }

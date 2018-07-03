@@ -1,19 +1,23 @@
 import React, { Component } from 'react'
 import FooterLayout from '../components/Footer-layout.jsx'
 import FormFooter from '../components/Form-footer.jsx'
+import Preloader from '../components/Preloader.jsx'
 
 class Footer extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      initial: 0,
-      status: 600,
+      preloader: false,
+      status: 0,
       message: ''
     }
   }
 
   handleSubscription = (event) => {
     event.preventDefault()
+    this.setState({
+      preloader: true
+    })
     fetch('http://localhost:3000/subscription-email', {
       method: 'POST',
       headers: {
@@ -31,7 +35,8 @@ class Footer extends Component {
         // console.info(data)
         this.setState({
           status: data.status,
-          message: data.message
+          message: data.message,
+          preloader: false
         })
         // document.getElementById('formContactenos').reset()
       })
@@ -56,15 +61,20 @@ class Footer extends Component {
     return (
       <FooterLayout>
         {
-          this.state.status === 200 || this.state.status === 400 || this.state.status === 500 ? (
-            <p className='message'>{this.state.message}</p>
+          this.state.preloader ? (
+            <Preloader />
           ) : (
-            <FormFooter
-              setRefName={this.setInputName}
-              setRefLastname={this.setRefLastname}
-              setRefEmail={this.setRefEmail}
-              handleSubscription={this.handleSubscription}
-            />
+            this.state.status === 200 || this.state.status === 500 ? (
+              <p className='message'>{this.state.message}</p>
+            ) : (
+              <FormFooter
+                setRefName={this.setInputName}
+                setRefLastname={this.setRefLastname}
+                setRefEmail={this.setRefEmail}
+                handleSubscription={this.handleSubscription}
+                message={this.state.message}
+              />
+            )
           )
         }
       </FooterLayout>
