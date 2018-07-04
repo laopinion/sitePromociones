@@ -15,11 +15,13 @@ module.exports = (env) => {
 
   return {
     entry: {
-      home: path.resolve(__dirname, 'src/entries/Home.jsx')
+      home: path.resolve(__dirname, 'src/entries/Home.jsx'),
+      product: path.resolve(__dirname, 'src/entries/Product.jsx')
     },
     output: {
       path: path.resolve(__dirname, 'dist/public'),
-      filename: 'js/[name].js'
+      filename: 'js/[name].js',
+      publicPath: '/'
     },
     module: {
       rules: [
@@ -63,8 +65,7 @@ module.exports = (env) => {
             options: {
               limit: 1000000,
               fallback: 'file-loader',
-              name: 'images/[name].[hash].[ext]',
-              publicPath: '/'
+              name: 'images/[name].[hash].[ext]'
             }
           }
         }

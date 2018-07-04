@@ -102,13 +102,13 @@ const listProducts = [
         id: '0001',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-001.',
         src: subProduct01,
-        id_parent: '002'
+        id_parent: '003'
       },
       {
         id: '0002',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
         src: subProduct02,
-        id_parent: '002'
+        id_parent: '003'
       },
       {
         id: '0003',
@@ -120,7 +120,7 @@ const listProducts = [
         id: '0003',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.',
         src: subProduct02,
-        id_parent: '002'
+        id_parent: '003'
       }
     ]
   }

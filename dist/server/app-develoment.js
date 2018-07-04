@@ -16,6 +16,18 @@ var _path = require('path');
 
 var _path2 = _interopRequireDefault(_path);
 
+var _bodyParser = require('body-parser');
+
+var _bodyParser2 = _interopRequireDefault(_bodyParser);
+
+var _superagent = require('superagent');
+
+var _superagent2 = _interopRequireDefault(_superagent);
+
+var _config = require('./config');
+
+var _config2 = _interopRequireDefault(_config);
+
 var _webpack = require('webpack');
 
 var _webpack2 = _interopRequireDefault(_webpack);
@@ -35,9 +47,9 @@ var _webpackHotMiddleware2 = _interopRequireDefault(_webpackHotMiddleware);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import ReactDOMServer from 'react-dom/server'
-
+// const express = require('express');
+var app = (0, _express2.default)();
 // import React from 'react'
-var app = (0, _express2.default)(); // const express = require('express');
 
 
 var compiler = (0, _webpack2.default)(_webpackDevConfig2.default);
@@ -48,6 +60,9 @@ app.use((0, _webpackDevMiddleware2.default)(compiler, {
 }));
 
 app.use((0, _webpackHotMiddleware2.default)(compiler));
+
+app.use(_bodyParser2.default.json());
+app.use(_bodyParser2.default.urlencoded({ extended: false }));
 
 // definimos el engine para archivos jsx
 app.engine('.js', _reactEngine2.default.server.create());
@@ -75,6 +90,55 @@ app.get('/producto/:id', function (req, res) {
     id: req.params.id
   };
   res.render('Product', data);
+});
+
+var listId = _config2.default.LISTID;
+var apiKey = _config2.default.API_KEY;
+var dc = apiKey.split('-')[1];
+
+// const b64string = 'any:' + apiKey
+
+app.post('/subscription-email', function (req, res) {
+  // console.info(req.body.email)
+  _superagent2.default.post('https://' + dc + '.api.mailchimp.com/3.0/lists/' + listId + '/members/').set('content-type', 'application/json').set('Authorization', 'Basic ' + apiKey).send({
+    'email_address': req.body.email,
+    'status': 'subscribed',
+    'merge_fields': {
+      'FNAME': req.body.firstName,
+      'LNAME': req.body.lastName
+    }
+  }).then(function (response) {
+    // console.log(response.status)
+    if (response.status < 300) {
+      res.status(200).send({ message: 'Gracias por subscribirse.', status: 200 });
+    } else {
+      res.status(400).send({ message: 'Algo salio mal intentalo mas tarde.', status: 400 });
+    }
+  }).catch(function (err) {
+    // console.log(err.status)
+    if (err.status === 400) {
+      res.status(400).send({ message: 'El Correo electrónico ya existe.', status: 400 });
+    } else {
+      res.status(500).send({ message: 'Algo salio mal :(', status: 500 });
+    }
+  });
+  // .end((err, response) => {
+  //   // console.log(err)
+  //   // console.log(response)
+  //   if (response.status < 300 || (response.status === 400 && response.body.title === 'Member Exists')) {
+  //     if (response.body.title === 'Member Exists') {
+  //       res.status(400).send({ message: 'El Correo electrónico ya existe.', status: 400 })
+  //     } else {
+  //       res.status(200).send({ message: 'Gracias por contactarnos.', status: 200 })
+  //     }
+  //   } else {
+  //     res.status(400).send({ message: 'Algo salio mal intentalo mas tarde.', status: 400 })
+  //   }
+
+  //   if (err) {
+  //     res.status(500).send({ message: 'Algo salio mal :(', status: 500 })
+  //   }
+  // })
 });
 
 // app.get('/prueba', (req, res) => {

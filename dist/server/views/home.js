@@ -36,7 +36,7 @@ var Home = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         _default2.default,
-        { title: 'Homepage', page: 'home' },
+        { title: 'Home', page: 'home' },
         _react2.default.createElement('section', { id: 'app' })
       );
     }
