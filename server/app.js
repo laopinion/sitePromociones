@@ -9,6 +9,25 @@ import config from './config'
 // import ReactDOMServer from 'react-dom/server'
 
 const app = express()
+// x = 5 -> x !== 5 -> false -> x !== 8 -> true los valores no son iguales
+// En el package para linux -> NODE_ENV=production node dist/server/server.js
+const isDeveloping = process.env.NODE_ENV !== 'production'
+
+if (isDeveloping) {
+  const webpack = require('webpack')
+  const webpackDevMiddleware = require('webpack-dev-middleware')
+  const webpackDevConf = require('../webpack.dev.config.js')
+  const webpackHotMiddleware = require('webpack-hot-middleware')
+
+  const compiler = webpack(webpackDevConf)
+
+  app.use(webpackDevMiddleware(compiler, {
+    publicPath: '/',
+    quiet: true
+  }))
+
+  app.use(webpackHotMiddleware(compiler))
+}
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))

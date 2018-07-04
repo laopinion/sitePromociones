@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "prestart": "babel server -d dist/server",
-    "start": "node dist/server/server.js",
-    "dev": "nodemon --exec babel-node server/server-develoment.js",
+    "start": "set NODE_ENV=production&&node dist/server/server.js",
+    "dev": "nodemon --exec babel-node server/server.js",
+    "start_linux": "NODE_ENV=production node index.js",
     "build:dev": "webpack --config ./webpack.dev.config.js",
     "build": "webpack --progress",
     "build:local": "webpack --mode development --env.NODE_ENV=local --progress",

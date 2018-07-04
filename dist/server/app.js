@@ -34,8 +34,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // const express = require('express');
 var app = (0, _express2.default)();
-// import React from 'react'
+// x = 5 -> x !== 5 -> false -> x !== 8 -> true los valores no son iguales
+// En el package para linux -> NODE_ENV=production node dist/server/server.js
 
+// import React from 'react'
+var isDeveloping = process.env.NODE_ENV !== 'production';
+
+if (isDeveloping) {
+  var webpack = require('webpack');
+  var webpackDevMiddleware = require('webpack-dev-middleware');
+  var webpackDevConf = require('../webpack.dev.config.js');
+  var webpackHotMiddleware = require('webpack-hot-middleware');
+
+  var compiler = webpack(webpackDevConf);
+
+  app.use(webpackDevMiddleware(compiler, {
+    publicPath: '/',
+    quiet: true
+  }));
+
+  app.use(webpackHotMiddleware(compiler));
+}
 
 app.use(_bodyParser2.default.json());
 app.use(_bodyParser2.default.urlencoded({ extended: false }));
