@@ -9,7 +9,7 @@ module.exports = (env) => {
 
   if (env.NODE_ENV === 'production') {
     plugins.push(
-      new CleanWebpackPlugin(['dist'], { root: __dirname })
+      new CleanWebpackPlugin(['dist/public'], { root: __dirname })
     )
   }
 
