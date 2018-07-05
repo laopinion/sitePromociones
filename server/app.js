@@ -16,7 +16,7 @@ const isDeveloping = process.env.NODE_ENV !== 'production'
 if (isDeveloping) {
   const webpack = require('webpack')
   const webpackDevMiddleware = require('webpack-dev-middleware')
-  const webpackDevConf = require('../webpack.dev.config.js')
+  const webpackDevConf = require('../webpack.dev.js')
   const webpackHotMiddleware = require('webpack-hot-middleware')
 
   const compiler = webpack(webpackDevConf)

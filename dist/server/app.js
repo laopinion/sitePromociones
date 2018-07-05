@@ -43,7 +43,7 @@ var isDeveloping = process.env.NODE_ENV !== 'production';
 if (isDeveloping) {
   var webpack = require('webpack');
   var webpackDevMiddleware = require('webpack-dev-middleware');
-  var webpackDevConf = require('../webpack.dev.config.js');
+  var webpackDevConf = require('../webpack.dev.js');
   var webpackHotMiddleware = require('webpack-hot-middleware');
 
   var compiler = webpack(webpackDevConf);

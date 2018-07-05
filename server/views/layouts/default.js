@@ -16,6 +16,7 @@ class Layout extends Component {
         </head>
         <body>
           {this.props.children}
+          <script src='/js/vendor_app.js' />
           <script src={`/js/${this.props.page}.js`} />
         </body>
       </html>
