@@ -53,7 +53,7 @@ var Layout = function (_Component) {
           'body',
           null,
           this.props.children,
-          _react2.default.createElement('script', { src: '/js/vendor_app.js' }),
+          !this.props.isDeveloping && _react2.default.createElement('script', { src: '/js/vendor_app.js' }),
           _react2.default.createElement('script', { src: '/js/' + this.props.page + '.js' })
         )
       );

@@ -74,15 +74,17 @@ app.get('/', function (req, res) {
   // res.status(200).send('Hola mundo')
   // const html = React.renderToString(<Home />);
   // const html = ReactDOMServer.renderToString(React.createElement(Home))
-
-  // res.send(html);
-  res.render('Home');
+  var data = {
+    isDeveloping: isDeveloping
+    // res.send(html);
+  };res.render('Home', data);
 });
 
 app.get('/producto/:id', function (req, res) {
   // console.log(req.params.id)
   var data = {
-    id: req.params.id
+    id: req.params.id,
+    isDeveloping: isDeveloping
   };
   res.render('Product', data);
 });

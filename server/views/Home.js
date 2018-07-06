@@ -4,7 +4,7 @@ import Layout from './layouts/default'
 class Home extends Component {
   render () {
     return (
-      <Layout title='Home' page='home'>
+      <Layout title='Home' page='home' isDeveloping={this.props.isDeveloping}>
         <section id='app' />
       </Layout>
     )

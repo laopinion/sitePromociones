@@ -47,15 +47,18 @@ app.get('/', (req, res) => {
   // res.status(200).send('Hola mundo')
   // const html = React.renderToString(<Home />);
   // const html = ReactDOMServer.renderToString(React.createElement(Home))
-
+  const data = {
+    isDeveloping
+  }
   // res.send(html);
-  res.render('Home')
+  res.render('Home', data)
 })
 
 app.get('/producto/:id', (req, res) => {
   // console.log(req.params.id)
   const data = {
-    id: req.params.id
+    id: req.params.id,
+    isDeveloping
   }
   res.render('Product', data)
 })

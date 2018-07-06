@@ -36,7 +36,7 @@ var Product = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         _default2.default,
-        { title: 'Producto-' + this.props.id, page: 'product' },
+        { title: 'Producto-' + this.props.id, page: 'product', isDeveloping: this.props.isDeveloping },
         _react2.default.createElement('section', { id: 'app', 'data-product_id': this.props.id })
       );
     }
