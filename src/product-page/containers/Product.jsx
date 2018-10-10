@@ -14,7 +14,7 @@ class Products extends Component {
     return (
       <ProductLayout>
         {
-          this.props.products.map((item, index) => {
+          this.props.subproducts.map((item, index) => {
             return <ProductDestacado key={index} {...item} />
           })
         }

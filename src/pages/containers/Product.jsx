@@ -30,7 +30,7 @@ class ProductPage extends Component {
         {
           this.props.products.map((item, index) => {
             if (item.id === this.props.product_id) {
-              return <Product key={index} products={item.subproducts} />
+              return <Product key={index} subproducts={item.subproducts} />
             }
           })
         }

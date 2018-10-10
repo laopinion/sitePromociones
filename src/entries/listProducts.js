@@ -19,13 +19,13 @@ const listProducts = [
   {
     id: '001',
     src: destacado1,
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit product 001.',
+    title: 'Aspiradora para auto',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nihil perspiciatis, dolorem expedita doloribus praesentium iusto obcaecati soluta. Optio facere consequatur atque eligendi hic totam fugit esse cupiditate alias ab!',
     slide: destacado1,
     subproducts: [
       {
         id: '0001',
-        title: 'Prueba product',
+        title: 'Aspiradora para auto',
         src: destacado1,
         id_parent: '001'
       },
@@ -52,7 +52,7 @@ const listProducts = [
   {
     id: '002',
     src: destacado2,
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    title: 'Set de ejercicio',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nihil perspiciatis, dolorem expedita doloribus praesentium iusto obcaecati soluta. Optio facere consequatur atque eligendi hic totam fugit esse cupiditate alias ab!',
     slide: destacado2,
     subproducts: [
@@ -85,7 +85,7 @@ const listProducts = [
   {
     id: '003',
     src: destacado3,
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit product 003.',
+    title: 'Smart band',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nihil perspiciatis, dolorem expedita doloribus praesentium iusto obcaecati soluta. Optio facere consequatur atque eligendi hic totam fugit esse cupiditate alias ab!',
     slide: destacado3,
     subproducts: [
@@ -118,7 +118,7 @@ const listProducts = [
   {
     id: '004',
     src: destacado4,
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit product 003.',
+    title: 'Olla a presión HOME ELEMENTS',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nihil perspiciatis, dolorem expedita doloribus praesentium iusto obcaecati soluta. Optio facere consequatur atque eligendi hic totam fugit esse cupiditate alias ab!',
     slide: destacado4,
     subproducts: [
