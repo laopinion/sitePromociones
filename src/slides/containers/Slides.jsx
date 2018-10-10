@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import slideOne from '../../img/slide-1.jpg'
+import slideOne from '../../img/products/slide.jpg'
 import SlidesLayout from '../components/Slides-layout.jsx'
 import slideOneMovil from '../../img/movil/slide-1.jpg'
 
 const screenWith = window.innerWidth
 let slide1 = slideOne
 let slide2 = slideOne
+let slide3 = slideOne
 
 if (screenWith <= 480) {
   slide1 = slideOneMovil
@@ -18,11 +19,11 @@ const slides = [
     title: 'slide-1'
   },
   {
-    src: 'https://images.pexels.com/photos/1110656/pexels-photo-1110656.jpeg?cs=srgb&dl=calm-clear-water-clouds-1110656.jpg&fm=jpg',
+    src: slide2,
     title: 'slide-2'
   },
   {
-    src: slide2,
+    src: slide3,
     title: 'slide-3'
   }
 ]
