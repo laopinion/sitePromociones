@@ -10,7 +10,8 @@ const hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&t
 module.exports = {
   entry: {
     home: [path.resolve(__dirname, 'src/entries/Home.jsx'), hotMiddlewareScript],
-    product: [path.resolve(__dirname, 'src/entries/Product.jsx'), hotMiddlewareScript]
+    product: [path.resolve(__dirname, 'src/entries/Product.jsx'), hotMiddlewareScript],
+    products: [path.resolve(__dirname, 'src/entries/ListProducts.jsx'), hotMiddlewareScript]
   },
   output: {
     path: path.resolve(__dirname, 'dist/public'),

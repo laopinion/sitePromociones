@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import GridProducts from '../components/GridProducts'
+import GridSubProducts from '../components/GridSubProducts'
 
 class Products extends Component {
   constructor (props) {
@@ -10,9 +10,9 @@ class Products extends Component {
   }
 
   render () {
-    const { products } = this.props
+    const {subproducts} = this.props
     return (
-      <GridProducts products={products} />
+      <GridSubProducts subproducts={subproducts} />
     )
   }
 }

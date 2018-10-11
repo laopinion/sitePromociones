@@ -54,6 +54,14 @@ app.get('/', (req, res) => {
   res.render('Home', data)
 })
 
+app.get('/producto', (req, res) => {
+  // console.log(req.params.id)
+  const data = {
+    isDeveloping
+  }
+  res.render('ListProducts', data)
+})
+
 app.get('/producto/:id', (req, res) => {
   // console.log(req.params.id)
   const data = {

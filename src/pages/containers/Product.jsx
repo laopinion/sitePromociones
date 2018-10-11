@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import ProductLayout from '../components/Product-layout.jsx'
 import Header from '../../header/components/Header.jsx'
-import SlideProduct from '../../product-page/components/Slide-product.jsx'
-import Product from '../../product-page/containers/Product.jsx'
+import SlideProduct from '../../subproducts/components/Slide-product.jsx'
+import Product from '../../subproducts/containers/Product.jsx'
 import Footer from '../../footer/containers/Footer.jsx'
 
 class ProductPage extends Component {
@@ -17,19 +17,21 @@ class ProductPage extends Component {
   }
 
   render () {
+    const {products, productID} = this.props
+
     return (
       <ProductLayout>
-        <Header products={this.props.products} />
+        <Header products={products} />
         {
-          this.props.products.map((item, index) => {
-            if (item.id === this.props.product_id) {
+          products.map((item, index) => {
+            if (item.id === productID) {
               return <SlideProduct key={index} {...item} />
             }
           })
         }
         {
-          this.props.products.map((item, index) => {
-            if (item.id === this.props.product_id) {
+          products.map((item, index) => {
+            if (item.id === productID) {
               return <Product key={index} subproducts={item.subproducts} />
             }
           })

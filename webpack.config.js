@@ -16,7 +16,8 @@ module.exports = (env) => {
   return {
     entry: {
       home: path.resolve(__dirname, 'src/entries/Home.jsx'),
-      product: path.resolve(__dirname, 'src/entries/Product.jsx')
+      product: path.resolve(__dirname, 'src/entries/Product.jsx'),
+      products: path.resolve(__dirname, 'src/entries/ListProducts.jsx')
     },
     output: {
       path: path.resolve(__dirname, 'dist/public'),

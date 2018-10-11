@@ -7,7 +7,8 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 module.exports = merge(common, {
   entry: {
     home: path.resolve(__dirname, 'src/entries/Home.jsx'),
-    product: path.resolve(__dirname, 'src/entries/Product.jsx')
+    product: path.resolve(__dirname, 'src/entries/Product.jsx'),
+    products: path.resolve(__dirname, 'src/entries/ListProducts.jsx')
   },
   mode: 'production',
   devtool: 'source-map',
