@@ -80,6 +80,14 @@ app.get('/', function (req, res) {
   };res.render('Home', data);
 });
 
+app.get('/producto', function (req, res) {
+  // console.log(req.params.id)
+  var data = {
+    isDeveloping: isDeveloping
+  };
+  res.render('ListProducts', data);
+});
+
 app.get('/producto/:id', function (req, res) {
   // console.log(req.params.id)
   var data = {
