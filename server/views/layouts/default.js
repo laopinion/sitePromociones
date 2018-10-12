@@ -13,6 +13,7 @@ class Layout extends Component {
           />
           <title>{this.props.title}</title>
           <link rel='stylesheet' href={`/css/${this.props.page}.css`} />
+          {/* <script src='https://www.google.com/recaptcha/api.js' async defer /> */}
         </head>
         <body>
           {this.props.children}

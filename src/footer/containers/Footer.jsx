@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import FooterLayout from '../components/Footer-layout.jsx'
 import FormFooter from '../components/Form-footer.jsx'
-import Preloader from '../components/Preloader.jsx'
 
 class Footer extends Component {
   constructor (props) {
@@ -9,16 +8,45 @@ class Footer extends Component {
     this.state = {
       preloader: false,
       status: 0,
-      message: ''
+      message: '',
+      token: null
     }
   }
 
   handleSubscription = (event) => {
     event.preventDefault()
+
+    this.recaptcha.execute()
+
+    this.setState((prevState) => ({
+      preloader: !prevState.preloader
+    }))
+  }
+
+  setInputName = (element) => {
+    this.name = element
+  }
+
+  setRefLastname = (element) => {
+    this.lastname = element
+  }
+
+  setRefEmail = (element) => {
+    this.email = element
+  }
+
+  SetRefRecaptcha = (element) => {
+    this.recaptcha = element
+  }
+
+  onResolved = () => {
+    // alert('Recaptcha resolved with response: ' + this.recaptcha.getResponse())
     this.setState({
-      preloader: true
+      token: this.recaptcha.getResponse()
     })
-    fetch('http://localhost:3000/subscription-email', {
+    // console.log(this.recaptcha.getResponse())
+    // console.log(this.state.token)
+    fetch(`${this.path}/subscription-email`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -27,7 +55,8 @@ class Footer extends Component {
       body: JSON.stringify({
         email: this.email.value,
         firstName: this.name.value,
-        lastName: this.lastname.value
+        lastName: this.lastname.value,
+        token: this.state.token
       })
     })
       .then((res) => res.json())
@@ -45,36 +74,27 @@ class Footer extends Component {
       })
   }
 
-  setInputName = (element) => {
-    this.name = element
-  }
-
-  setRefLastname = (element) => {
-    this.lastname = element
-  }
-
-  setRefEmail = (element) => {
-    this.email = element
+  componentDidMount () {
+    this.path = window.location.origin
   }
 
   render () {
     return (
       <FooterLayout>
         {
-          this.state.preloader ? (
-            <Preloader />
+          this.state.status === 200 || this.state.status === 500 ? (
+            <p className='message'>{this.state.message}</p>
           ) : (
-            this.state.status === 200 || this.state.status === 500 ? (
-              <p className='message'>{this.state.message}</p>
-            ) : (
-              <FormFooter
-                setRefName={this.setInputName}
-                setRefLastname={this.setRefLastname}
-                setRefEmail={this.setRefEmail}
-                handleSubscription={this.handleSubscription}
-                message={this.state.message}
-              />
-            )
+            <FormFooter
+              setRefName={this.setInputName}
+              setRefLastname={this.setRefLastname}
+              setRefEmail={this.setRefEmail}
+              handleSubscription={this.handleSubscription}
+              message={this.state.message}
+              SetRefRecaptcha={this.SetRefRecaptcha}
+              onResolved={this.onResolved}
+              preloader={this.state.preloader}
+            />
           )
         }
       </FooterLayout>

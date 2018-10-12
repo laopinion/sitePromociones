@@ -76,36 +76,46 @@ const apiKey = config.API_KEY
 const dc = apiKey.split('-')[1]
 
 // const b64string = 'any:' + apiKey
-
 app.post('/subscription-email', (req, res) => {
   // console.info(req.body.email)
+  // console.log(req.body.token)
+
   request
-    .post('https://' + dc + '.api.mailchimp.com/3.0/lists/' + listId + '/members/')
+    .post(`https://www.google.com/recaptcha/api/siteverify?secret=${config.SECRET_CAPTCHA}&response=${req.body.token}&remoteip=${req.connection.remoteAddress}`)
     .set('content-type', 'application/json')
-    .set('Authorization', 'Basic ' + apiKey)
-    .send({
-      'email_address': req.body.email,
-      'status': 'subscribed',
-      'merge_fields': {
-        'FNAME': req.body.firstName,
-        'LNAME': req.body.lastName
-      }
-    })
     .then((response) => {
-      // console.log(response.status)
-      if (response.status < 300) {
-        res.status(200).send({ message: 'Gracias por subscribirse.', status: 200 })
-      } else {
-        res.status(400).send({ message: 'Algo salio mal intentalo mas tarde.', status: 400 })
+      // console.log(response)
+      if (response.body.success !== undefined && !response.body.success) {
+        res.status(400).send({ message: 'Captcha validation failed.', status: 400 })
       }
-    })
-    .catch((err) => {
-      // console.log(err.status)
-      if (err.status === 400) {
-        res.status(400).send({ message: 'El Correo electrónico ya existe.', status: 400 })
-      } else {
-        res.status(500).send({ message: 'Algo salio mal :(', status: 500 })
-      }
+      request
+        .post('https://' + dc + '.api.mailchimp.com/3.0/lists/' + listId + '/members/')
+        .set('content-type', 'application/json')
+        .set('Authorization', 'Basic ' + apiKey)
+        .send({
+          'email_address': req.body.email,
+          'status': 'subscribed',
+          'merge_fields': {
+            'FNAME': req.body.firstName,
+            'LNAME': req.body.lastName
+          }
+        })
+        .then((response) => {
+          // console.log(response.status)
+          if (response.status < 300) {
+            res.status(200).send({ message: 'Gracias por subscribirse.', status: 200 })
+          } else {
+            res.status(400).send({ message: 'Algo salio mal intentalo mas tarde.', status: 400 })
+          }
+        })
+        .catch((err) => {
+          // console.log(err.status)
+          if (err.status === 400) {
+            res.status(400).send({ message: 'El Correo electrónico ya existe.', status: 400 })
+          } else {
+            res.status(500).send({ message: 'Algo salio mal :(', status: 500 })
+          }
+        })
     })
 })
 
