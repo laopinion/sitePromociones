@@ -14,7 +14,8 @@ const SlideProduct = (props) => {
           <h2>{title}</h2>
         </div>
         <div className='info'>
-          <p>{description}</p>
+          {/* <p>{description}</p> */}
+          <p dangerouslySetInnerHTML={{__html: description}} />
         </div>
 
         <button className='btn_buy'>

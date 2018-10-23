@@ -14,9 +14,19 @@
   
   h2
     margin: 0
+
+  h3
+    color: #333333
+    text-transform: lowercase
+  h3:first-letter
+    text-transform: uppercase
+
+  p
+    color: #333333
   
   .info
-    margin-bottom: 50px
+    max-width: 600px
+    margin: 0 auto 50px
   
   .title, .description
     color: $gris_1
@@ -54,3 +64,6 @@
       justify-content: center
       align-items: center
       height: 100%
+@media screen and (max-width: 480px)
+  #SlideProduct .btn_buy
+    width: 320px

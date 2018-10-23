@@ -42,6 +42,7 @@ app.set('view engine', 'js')
 app.set('view', engine.expressView)
 
 app.use(express.static('dist/public'))// Files css, js etc
+app.use(express.static('static'))// Files img
 
 app.get('/', (req, res) => {
   // res.status(200).send('Hola mundo')

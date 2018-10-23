@@ -22,7 +22,7 @@ class SearchContainer extends Component {
     // console.log(this.input.value, 'submit')
     // Aca se puede enviar todos los datos con un post
     const results = []
-    this.props.listProducts.map((product) => {
+    /* this.props.listProducts.map((product) => {
       // console.log(category)
       product.subproducts.filter((item) => {
         // console.log(item);
@@ -37,7 +37,22 @@ class SearchContainer extends Component {
         // return author.includes(query);
         // return item.author.includes(action.payload.query)
       })
+    }) */
+
+    this.props.listProducts.filter((item) => {
+      // console.log(item);
+      const title = item.title.toLowerCase()
+      const query = this.input.value.toLowerCase()
+      if (query !== '') {
+        if (title.includes(query)) {
+          // console.log(item);
+          results.push(item)
+        }
+      }
+      // return author.includes(query);
+      // return item.author.includes(action.payload.query)
     })
+
     this.setState({
       results,
       styles: {
@@ -80,7 +95,7 @@ class SearchContainer extends Component {
     // })
 
     const results = []
-    this.props.listProducts.map((product) => {
+    /* this.props.listProducts.map((product) => {
       // console.log(category)
       product.subproducts.filter((item) => {
         // console.log(item);
@@ -95,7 +110,22 @@ class SearchContainer extends Component {
         // return author.includes(query);
         // return item.author.includes(action.payload.query)
       })
+    }) */
+
+    this.props.listProducts.filter((item) => {
+      // console.log(item);
+      const title = item.title.toLowerCase()
+      const query = this.input.value.toLowerCase()
+      if (query !== '') {
+        if (title.includes(query)) {
+          // console.log(item);
+          results.push(item)
+        }
+      }
+      // return author.includes(query);
+      // return item.author.includes(action.payload.query)
     })
+
     this.setState({
       results,
       styles: {
