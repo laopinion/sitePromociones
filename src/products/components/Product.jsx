@@ -4,13 +4,15 @@ const Product = (props) => {
   return (
     <div className='Product'>
       <figure>
-        <img src={props.src} alt={props.alt} />
+        <a href={`/producto/${props.slug}`}>
+          <img src={props.src} alt={props.alt} />
+        </a>
       </figure>
       <div className='info'>
         <h4 className='title'>{props.title}</h4>
-        <p className='description'>{props.description}</p>
+        {/* <p className='description'>{props.description}</p> */}
         <button className='btn_buy'>
-          <a href={`/producto/${props.id}`}>Comprar</a>
+          <a href={`/producto/${props.slug}`}>Comprar</a>
         </button>
       </div>
       <hr />

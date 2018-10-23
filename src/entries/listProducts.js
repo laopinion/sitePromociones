@@ -1,7 +1,12 @@
-import destacado1 from '../img/products/product_1.jpg'
-import destacado2 from '../img/products/product_2.jpg'
-import destacado3 from '../img/products/product_3.jpg'
-import destacado4 from '../img/products/product_4.jpg'
+import destacado1 from '../img/products/slideProduct_1.jpg'
+import destacado2 from '../img/products/slideProduct_2.jpg'
+import destacado3 from '../img/products/slideProduct_3.jpg'
+import destacado4 from '../img/products/slideProduct_4.jpg'
+
+import product1 from '../img/products/product_1.jpg'
+import product2 from '../img/products/product_2.jpg'
+import product3 from '../img/products/product_3.jpg'
+import product4 from '../img/products/product_4.jpg'
 // import slideOne from '../img/slide-1.jpg'
 // import subProduct01 from '../img/sub_product_01.jpg'
 // import subProduct02 from '../img/sub_product_02.jpg'
@@ -18,10 +23,11 @@ import destacado4 from '../img/products/product_4.jpg'
 const listProducts = [
   {
     id: '001',
-    src: destacado1,
+    src: product1,
     title: 'Aspiradora para auto',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nihil perspiciatis, dolorem expedita doloribus praesentium iusto obcaecati soluta. Optio facere consequatur atque eligendi hic totam fugit esse cupiditate alias ab!',
     slide: destacado1,
+    slug: 'aspiradora-para-auto',
     subproducts: [
       {
         id: '0001',
@@ -51,10 +57,11 @@ const listProducts = [
   },
   {
     id: '002',
-    src: destacado2,
+    src: product2,
     title: 'Set de ejercicio',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nihil perspiciatis, dolorem expedita doloribus praesentium iusto obcaecati soluta. Optio facere consequatur atque eligendi hic totam fugit esse cupiditate alias ab!',
     slide: destacado2,
+    slug: 'set-de-ejercicio',
     subproducts: [
       {
         id: '0001',
@@ -84,10 +91,11 @@ const listProducts = [
   },
   {
     id: '003',
-    src: destacado3,
+    src: product3,
     title: 'Smart band',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nihil perspiciatis, dolorem expedita doloribus praesentium iusto obcaecati soluta. Optio facere consequatur atque eligendi hic totam fugit esse cupiditate alias ab!',
     slide: destacado3,
+    slug: 'smart-band',
     subproducts: [
       {
         id: '0001',
@@ -117,10 +125,11 @@ const listProducts = [
   },
   {
     id: '004',
-    src: destacado4,
+    src: product4,
     title: 'Olla a presión HOME ELEMENTS',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nihil perspiciatis, dolorem expedita doloribus praesentium iusto obcaecati soluta. Optio facere consequatur atque eligendi hic totam fugit esse cupiditate alias ab!',
     slide: destacado4,
+    slug: 'olla-a-presion-home-elements',
     subproducts: [
       {
         id: '0001',

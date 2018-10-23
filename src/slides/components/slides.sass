@@ -4,11 +4,21 @@
     margin: 0
     padding: 0
     list-style: none
+    height: 481px
+    position: relative
+    li
+      max-height: 481px
+      width: 100%
+      display: block
     img
       animation: opacity 0.8s ease-out
       width: 100%
     .btn_slides
-      position: relative
+      // position: relative
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
       .btn
         position: absolute
         top: -40px
@@ -33,7 +43,7 @@
       margin: 0 auto
       display: flex
       justify-content: space-around
-      width: 70px
+      width: 100px
       .badge
         height: 18px
         padding: 0
