@@ -8,6 +8,7 @@ import qhubo from '../../img/qhubo.png'
 import logoOp from '../../img/opcom.png'
 
 const FooterLayout = (props) => {
+  const { ano } = props
   return (
     <footer id='Footer'>
       <section className='footer container'>
@@ -47,7 +48,7 @@ const FooterLayout = (props) => {
           </figure>
           <hr />
           <p>DIARIO LA OPINIÓN - Av. 4 Nro. 16 - 12. Teléfono 09 7 5829999 - Fax 09 7 5717859 - Cúcuta - Colombia
-              Copyright   2001 - 2015 La Opinión S.A. - Todos los Derechos Reservados
+              Copyright   2001 - {ano} La Opinión S.A. - Todos los Derechos Reservados
               Reservados todos los derechos; queda prohibida la reproducción, distribución,  comunicación. Incluida en particular su mera reproducción y/o puesta a disposición como resúmenes, reseñas o revistas de prensa con fines comerciales e indirectamente lucrativos, a lo que se manifiesta oposición rotunda.
           </p>
           <hr />

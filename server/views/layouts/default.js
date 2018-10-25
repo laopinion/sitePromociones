@@ -21,7 +21,7 @@ class Layout extends Component {
           <meta name='msapplication-TileColor' content='#da532c' />
           <meta name='theme-color' content='#ffffff' />
 
-          <title>{this.props.title}</title>
+          <title>{`${this.props.title} - La opinión`}</title>
           <link rel='stylesheet' href={`/css/${this.props.page}.css`} />
           {/* <script src='https://www.google.com/recaptcha/api.js' async defer /> */}
         </head>

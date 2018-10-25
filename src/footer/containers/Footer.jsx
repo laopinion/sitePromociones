@@ -9,7 +9,8 @@ class Footer extends Component {
       preloader: false,
       status: 0,
       message: '',
-      token: null
+      token: null,
+      ano: ''
     }
   }
 
@@ -76,11 +77,16 @@ class Footer extends Component {
 
   componentDidMount () {
     this.path = window.location.origin
+    const fecha = new Date()
+    // this.ano = fecha.getFullYear()
+    this.setState({
+      ano: fecha.getFullYear()
+    })
   }
 
   render () {
     return (
-      <FooterLayout>
+      <FooterLayout ano={this.state.ano}>
         {
           this.state.status === 200 || this.state.status === 500 ? (
             <p className='message'>{this.state.message}</p>
