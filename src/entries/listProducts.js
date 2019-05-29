@@ -1,10 +1,10 @@
-import destacado1 from '../img/products/slideProduct_1.jpg'
-import destacado2 from '../img/products/slideProduct_2.jpg'
+import destacado1 from '../img/products/mayo/slide-1.jpg'
+import destacado2 from '../img/products/mayo/slide-2.jpg'
 import destacado3 from '../img/products/slideProduct_3.jpg'
 import destacado4 from '../img/products/slideProduct_4.jpg'
 
-import product1 from '../img/products/product_1.jpg'
-import product2 from '../img/products/product_2.jpg'
+import product1 from '../img/products/mayo/product_1.jpg'
+import product2 from '../img/products/mayo/product_2.jpg'
 import product3 from '../img/products/product_3.jpg'
 import product4 from '../img/products/product_4.jpg'
 // import slideOne from '../img/slide-1.jpg'
@@ -24,21 +24,20 @@ const listProducts = [
   {
     id: '001',
     src: product1,
-    title: 'Aspiradora para auto',
+    title: 'Picatodo',
+    active: true,
     description: `
-      <h3>ACCESORIOS INCLUIDOS</h3>
-      <p>1 Extensión <br/> 1 Cepillo</p>
       <h3>CARACTERÍASTICAS</h3>
       <p>
-        •	Diseño ligero, proporciona mayor control <br/>
-        •	Alta potencia y diseño portátil para uso en el auto <br/>
-        •	Filtro lavable, reutilizable <br/>
-        •	Incluye accesorios para aspirar en áreas estrechas <br/>
+        •	Capacidad 500 ml <br/>
+        •	Aspas mezcladoras <br/>
+        •	Cuchillas en acero inoxidables <br/>
+        •	Botón de turbo <br/>
+        •	Vaso plástico transparente <br/>
       </p>
-      <p>Unidades disponibles: 85 unidades</p>
     `,
     slide: destacado1,
-    slug: 'aspiradora-para-auto',
+    slug: 'picatodo',
     subproducts: [
       {
         id: '0001',
@@ -69,30 +68,20 @@ const listProducts = [
   {
     id: '002',
     src: product2,
-    title: 'Set de ejercicio',
+    title: 'Sandwichera',
+    active: true,
     description: `
       <h3>CARACTERÍASTICAS</h3>
       <p>
-      •	Balón ( 65 cm de diámetro) <br/>
-      •	Inflador para balón  <br/>
-      •	Rueda de ejercicio para abdominales ( 17 cm) <br/>
-      •	Tapete para ejercicio ( 173 x 61 x 0,4 cm ) <br/> 
-      •	Banda elástica tonificadora ( 7 x 11 x120 cm)  <br/>
-      •	Unidades disponibles: 100  <br/>
+      •	Luces led que indican el estado de preparación: verde, lista para disfrutar! <br/>
+      •	Diseño y tamaño perfecto para guardar en cualquier espacio de la cocina  <br/>
+      •	Sistema de cierre con seguro <br/>
+      •	Color: Negro <br/> 
+      •	Material: Acero <br/>
       </p>
-
-      <h3>FUNCIONES</h3>
-      <p>
-      •	Elementos que ayudan el equilibrio postural y coordinación <br/>
-      •	Tapete que se adhiere a la mayoría de superficies <br/>
-      •	Comodidad al hacer ejercicios: yoga, Pilates, stretching y abdomen <br/>
-      •	La rueda de ejercicios ayuda a fortalecer los músculos abdominales <br/>
-      •	La banda elástica ayuda a tonificar los músculos del cuerpo     <br/>  
-      </p>
-      <p>Unidades disponibles: 78 </p>
     `,
     slide: destacado2,
-    slug: 'set-de-ejercicio',
+    slug: 'sandwichera',
     subproducts: [
       {
         id: '0001',
@@ -124,6 +113,7 @@ const listProducts = [
     id: '003',
     src: product3,
     title: 'Smart band',
+    active: false,
     description: `
       <h3>FUNCIONES</h3>
       <p>
@@ -174,6 +164,7 @@ const listProducts = [
     id: '004',
     src: product4,
     title: 'Olla a presión HOME ELEMENTS',
+    active: false,
     description: `
       <h3>Características</h3>
       <p>

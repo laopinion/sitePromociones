@@ -1,44 +1,33 @@
 import React, { Component } from 'react'
-// import slideOne from '../../img/products/slide.jpg'
-import slideTwo from '../../img/products/slideProduct_1.jpg'
-import slideThree from '../../img/products/slideProduct_2.jpg'
-import slideFour from '../../img/products/slideProduct_3.jpg'
-import slideFive from '../../img/products/slideProduct_4.jpg'
+
 import SlidesLayout from '../components/Slides-layout.jsx'
-import slideOneMovil from '../../img/movil/slide-1.jpg'
+
+import slideOne from '../../img/products/mayo/slide-1.jpg'
+import slideTwo from '../../img/products/mayo/slide-2.jpg'
+
+import slideOneMovil from '../../img/movil/mayo/slide-1.jpg'
+import slideTwoMovil from '../../img/movil/mayo/slide-2.jpg'
 
 const screenWith = window.innerWidth
-// let slide1 = slideOne
+
+let slide1 = slideOne
 let slide2 = slideTwo
-let slide3 = slideThree
-let slide4 = slideFour
-let slide5 = slideFive
 
 if (screenWith <= 480) {
-  slide2 = slideOneMovil
-  slide3 = slideOneMovil
+  slide1 = slideOneMovil
+  slide2 = slideTwoMovil
 }
 
 const slides = [
   {
+    src: slide1,
+    title: 'Picatodo',
+    slug: 'picatodo'
+  },
+  {
     src: slide2,
-    title: 'ASPIRADORA PARA AUTO',
-    slug: 'aspiradora-para-auto'
-  },
-  {
-    src: slide3,
-    title: 'SET DE EJERCICIO',
-    slug: 'set-de-ejercicio'
-  },
-  {
-    src: slide4,
-    title: 'SMART BAND',
-    slug: 'smart-band'
-  },
-  {
-    src: slide5,
-    title: 'OLLA PRESIÓN HOME ELEMENTS',
-    slug: 'olla-a-presion-home-elements'
+    title: 'Sandwichera',
+    slug: 'sandwichera'
   }
 ]
 
