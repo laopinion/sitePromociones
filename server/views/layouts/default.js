@@ -23,7 +23,6 @@ class Layout extends Component {
           {/* Se agrego un cambio al title */}
           <title>{`${this.props.title} - La opinión`}</title>
           <link rel='stylesheet' href={`/css/${this.props.page}.css`} />
-          {/* <script src='https://www.google.com/recaptcha/api.js' async defer /> */}
         </head>
         <body>
           {this.props.children}
