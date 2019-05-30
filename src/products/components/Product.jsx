@@ -11,9 +11,17 @@ const Product = (props) => {
       <div className='info'>
         <h4 className='title'>{props.title}</h4>
         {/* <p className='description'>{props.description}</p> */}
-        <button className='btn_buy'>
-          <a href={`/producto/${props.slug}`}>Comprar</a>
-        </button>
+        {
+          props.active ? (
+            <button className='btn_buy'>
+              <a href={`/producto/${props.slug}`}>Comprar</a>
+            </button>
+          ) : (
+            <button className='btn_buy inactive' disabled>
+              <a href='/#' className='inactive'>Comprar</a>
+            </button>
+          )
+        }
       </div>
       <hr />
     </div>

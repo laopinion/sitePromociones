@@ -14,6 +14,7 @@
     "build:prod": "webpack --mode production --env.NODE_ENV=production -p --progress",
     "webpack-prod": "webpack -p --progress --config webpack.prod.js --mode production",
     "webpack-dev": "webpack -p --progress --config webpack.dev.js --mode development",
+    "deploybot": "babel server -d dist/server",
     "lint": "standard --fix"
   },
   "standard": {
