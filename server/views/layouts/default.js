@@ -25,6 +25,7 @@ class Layout extends Component {
           <link rel='stylesheet' href={`/css/${this.props.page}.css`} />
         </head>
         <body>
+          {console.log(this.props.children)}
           {this.props.children}
           <script src={`/js/${this.props.page}.js`} />
           {
