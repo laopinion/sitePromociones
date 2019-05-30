@@ -1,8 +1,5 @@
-// const express = require('express');
 import express from 'express'
-// import React from 'react'
-import engine from 'react-engine'
-import path from 'path'
+import hbs from 'express-handlebars'
 import bodyParser from 'body-parser'
 import request from 'superagent'
 import config from './config'
@@ -29,47 +26,46 @@ if (isDeveloping) {
   app.use(webpackHotMiddleware(compiler))
 }
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
-
-// definimos el engine para archivos jsx
-app.engine('.js', engine.server.create())
-// configuramos la ruta a las vistas
-app.set('views', path.resolve(__dirname, 'views'))
-// indicamos que el engine a usar es el de archivos jsx
-app.set('view engine', 'js')
-// le indicamos que use react-engine como engine de nuestras vistas
-app.set('view', engine.expressView)
-
 app.use(express.static('dist/public'))// Files css, js etc
 app.use(express.static('static'))// Files img
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
+app.engine('.hbs', hbs({
+  defaultLayout: 'default',
+  extname: '.hbs'
+}))
+
+app.set('view engine', '.hbs')
+
 app.get('/', (req, res) => {
-  // res.status(200).send('Hola mundo')
-  // const html = React.renderToString(<Home />);
-  // const html = ReactDOMServer.renderToString(React.createElement(Home))
-  const data = {
-    isDeveloping
-  }
-  // res.send(html);
-  res.render('Home', data)
+  res.render('home', {
+    title: 'Promociones',
+    page: 'home',
+    isDeveloping: !isDeveloping
+  })
 })
 
 app.get('/producto', (req, res) => {
   // console.log(req.params.id)
-  const data = {
-    isDeveloping
-  }
-  res.render('ListProducts', data)
+  res.render('listProducts', {
+    title: 'Productos',
+    page: 'products',
+    isDeveloping: !isDeveloping
+  })
 })
 
 app.get('/producto/:id', (req, res) => {
   // console.log(req.params.id)
-  const data = {
-    id: req.params.id,
-    isDeveloping
-  }
-  res.render('Product', data)
+  const id = req.params.id
+
+  res.render('product', {
+    title: `Producto-${id}`,
+    page: 'product',
+    id: id,
+    isDeveloping: !isDeveloping
+  })
 })
 
 const listId = config.LISTID
