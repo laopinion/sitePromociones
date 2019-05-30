@@ -42,11 +42,26 @@ class Slides extends Component {
     super(props)
     this.state = {
       // slideIndex: 1
-      value: 1
+      value: 1,
+      height: 0,
+      width: 0,
+      slides: [
+        {
+          src: slide1,
+          title: 'Picatodo',
+          slug: 'picatodo'
+        },
+        {
+          src: slide2,
+          title: 'Sandwichera',
+          slug: 'sandwichera'
+        }
+      ]
     }
 
     this.slideIndex = 0
     // this.plusSlides = this.plusSlides.bind(this)
+    window.addEventListener('resize', this.update)
   }
 
   plusSlides (n) {
@@ -113,14 +128,34 @@ class Slides extends Component {
   componentDidMount () {
     this.showSlides(this.slideIndex)
     this.carousel()
+    this.update()
+  }
+
+  update = () => {
+    let screenWith = this.state.width || window.innerWidth
+
+    if (screenWith <= 480) {
+      slide1 = slideOneMovil
+      slide2 = slideTwoMovil
+    } else {
+      slide1 = slideOne
+      slide2 = slideTwo
+    }
+
+    this.setState({
+      height: window.innerHeight,
+      width: window.innerWidth,
+      slides: [{...this.state.slides[0], src: slide1}, {...this.state.slides[1], src: slide2}]
+    })
   }
 
   render () {
+    // console.log(this.state)
     return (
       <SlidesLayout>
         <ul>
           {
-            slides.map((item, index) => {
+            this.state.slides.map((item, index) => {
               return (
                 <li key={index} className='mySlides'>
                   <a href={`/producto/${item.slug}`}>
@@ -134,7 +169,7 @@ class Slides extends Component {
             <button className='btn left' onClick={this.plusSlides.bind(this, -1)}>&#10094;</button>
             <button className='btn right' onClick={this.plusSlides.bind(this, 1)}>&#10095;</button>
             <div className='badges'>
-              {slides.map((item, index) => {
+              {this.state.slides.map((item, index) => {
                 return <span key={index} className='badge demo' onClick={this.currentDiv.bind(this, index + 1)} />
               })}
             </div>

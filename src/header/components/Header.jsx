@@ -1,7 +1,7 @@
 import React from 'react'
 import Search from '../containers/Search.jsx'
 import './header.sass'
-import logo from '../../img/op.png'
+import logo from '../../img/logo-op.svg'
 
 const menu = [
   {
