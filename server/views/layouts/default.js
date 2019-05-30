@@ -2,6 +2,22 @@ import React, { Component } from 'react'
 
 // acá definimos el layout de nuestro HTML donde están los tags html, head, body, etc.
 class Layout extends Component {
+  componentDidMount () {
+    this.analitycs()
+  }
+
+  analitycs () {
+    const s = document.createElement('script')
+    s.type = 'text/javascript'
+    s.async = true
+    s.innerHTML = `window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141172940-1');`
+    this.instance.appendChild(s)
+  }
+
   render () {
     return (
       <html lang='es'>
@@ -23,6 +39,7 @@ class Layout extends Component {
           {/* Se agrego un cambio al title */}
           <title>{`${this.props.title} - La opinión`}</title>
           <link rel='stylesheet' href={`/css/${this.props.page}.css`} />
+          <script async src='https://www.googletagmanager.com/gtag/js?id=UA-141172940-1' />
         </head>
         <body>
           {this.props.children}

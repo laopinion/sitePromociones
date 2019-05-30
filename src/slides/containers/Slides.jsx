@@ -18,18 +18,18 @@ if (screenWith <= 480) {
   slide2 = slideTwoMovil
 }
 
-const slides = [
-  {
-    src: slide1,
-    title: 'Picatodo',
-    slug: 'picatodo'
-  },
-  {
-    src: slide2,
-    title: 'Sandwichera',
-    slug: 'sandwichera'
-  }
-]
+// const slides = [
+//   {
+//     src: slide1,
+//     title: 'Picatodo',
+//     slug: 'picatodo'
+//   },
+//   {
+//     src: slide2,
+//     title: 'Sandwichera',
+//     slug: 'sandwichera'
+//   }
+// ]
 
 /*
   img de pruebas -> https://www.pexels.com/
