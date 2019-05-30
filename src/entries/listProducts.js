@@ -7,18 +7,18 @@ import product1 from '../img/products/mayo/product_1.jpg'
 import product2 from '../img/products/mayo/product_2.jpg'
 import product3 from '../img/products/product_3.jpg'
 import product4 from '../img/products/product_4.jpg'
-// import slideOne from '../img/slide-1.jpg'
-// import subProduct01 from '../img/sub_product_01.jpg'
-// import subProduct02 from '../img/sub_product_02.jpg'
-// import slideOneMovil from '../img/movil/slide-1.jpg'
 
-// const screenWith = window.innerWidth
-// let slide1 = slideOne
-// let slide2 = slideOne
+import destacado1Movil from '../img/movil/mayo/slide-1.jpg'
+import destacado2Movil from '../img/movil/mayo/slide-2.jpg'
 
-// if (screenWith <= 480) {
-//   slide1 = slideOneMovil
-// }
+const screenWith = window.innerWidth
+let slide1 = destacado1
+let slide2 = destacado2
+
+if (screenWith <= 480) {
+  slide1 = destacado1Movil
+  slide2 = destacado2Movil
+}
 
 const listProducts = [
   {
@@ -27,7 +27,7 @@ const listProducts = [
     title: 'Picatodo',
     active: true,
     description: `
-      <h3>CARACTERÍASTICAS</h3>
+      <h3>Características</h3>
       <p>
         •	Capacidad 500 ml <br/>
         •	Aspas mezcladoras <br/>
@@ -36,7 +36,7 @@ const listProducts = [
         •	Vaso plástico transparente <br/>
       </p>
     `,
-    slide: destacado1,
+    slide: slide1,
     slug: 'picatodo',
     subproducts: [
       {
@@ -71,7 +71,7 @@ const listProducts = [
     title: 'Sandwichera',
     active: true,
     description: `
-      <h3>CARACTERÍASTICAS</h3>
+      <h3>Características</h3>
       <p>
       •	Luces led que indican el estado de preparación: verde, lista para disfrutar! <br/>
       •	Diseño y tamaño perfecto para guardar en cualquier espacio de la cocina  <br/>
@@ -80,7 +80,7 @@ const listProducts = [
       •	Material: Acero <br/>
       </p>
     `,
-    slide: destacado2,
+    slide: slide2,
     slug: 'sandwichera',
     subproducts: [
       {
