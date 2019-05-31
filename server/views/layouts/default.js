@@ -1,24 +1,10 @@
 import React, { Component } from 'react'
+import Script from './Script'
 
 // acá definimos el layout de nuestro HTML donde están los tags html, head, body, etc.
 class Layout extends Component {
-  componentDidMount () {
-    this.analitycs()
-  }
-
-  analitycs () {
-    const s = document.createElement('script')
-    s.type = 'text/javascript'
-    s.async = true
-    s.innerHTML = `window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-141172940-1');`
-    this.instance.appendChild(s)
-  }
-
   render () {
+    // console.log('ok todo bien')
     return (
       <html lang='es'>
         <head>
@@ -39,7 +25,6 @@ class Layout extends Component {
           {/* Se agrego un cambio al title */}
           <title>{`${this.props.title} - La opinión`}</title>
           <link rel='stylesheet' href={`/css/${this.props.page}.css`} />
-          <script async src='https://www.googletagmanager.com/gtag/js?id=UA-141172940-1' />
         </head>
         <body>
           {this.props.children}
@@ -48,6 +33,19 @@ class Layout extends Component {
             !this.props.isDeveloping &&
               <script src='/js/vendor_app.js' />
           }
+
+          <script async src='https://www.googletagmanager.com/gtag/js?id=UA-141172940-1' />
+          <Script>
+            {
+              () => {
+                window.dataLayer = window.dataLayer || []
+                function gtag () { dataLayer.push(arguments) }
+                gtag('js', new Date())
+
+                gtag('config', 'UA-141172940-1')
+              }
+            }
+          </Script>
         </body>
       </html>
     )
