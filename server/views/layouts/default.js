@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import Script from './Script'
 
 // acá definimos el layout de nuestro HTML donde están los tags html, head, body, etc.
 class Layout extends Component {
   render () {
+    // console.log('ok todo bien')
     return (
       <html lang='es'>
         <head>
@@ -31,6 +33,19 @@ class Layout extends Component {
             !this.props.isDeveloping &&
               <script src='/js/vendor_app.js' />
           }
+
+          <script async src='https://www.googletagmanager.com/gtag/js?id=UA-141172940-1' />
+          <Script>
+            {
+              () => {
+                window.dataLayer = window.dataLayer || []
+                function gtag () { dataLayer.push(arguments) }
+                gtag('js', new Date())
+
+                gtag('config', 'UA-141172940-1')
+              }
+            }
+          </Script>
         </body>
       </html>
     )
