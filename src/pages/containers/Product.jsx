@@ -4,6 +4,7 @@ import Header from '../../header/components/Header.jsx'
 import InfoProduct from '../../subproducts/components/Info-product.jsx'
 // import Product from '../../subproducts/containers/Product.jsx'
 import Footer from '../../footer/containers/Footer.jsx'
+import Loading from '../components/Loading'
 
 class ProductPage extends Component {
   constructor (props) {
@@ -11,13 +12,23 @@ class ProductPage extends Component {
     // const $app = document.getElementById('app')
     // const id = $app.dataset.product_id
     this.state = {
-      modalVisible: false
+      modalVisible: false,
+      isLoading: true
       // product_id: id
     }
   }
 
+  componentDidMount () {
+    this.setState({ isLoading: false })
+  }
+
   render () {
     const {products, productID} = this.props
+    const { isLoading } = this.state
+
+    if (isLoading) {
+      return <Loading />
+    }
 
     return (
       <ProductLayout>
