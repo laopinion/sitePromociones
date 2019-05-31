@@ -1,16 +1,26 @@
-import Header from './Header';
+import Header from './Header'
+import './app.sass'
 
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-};
+// const layoutStyle = {
+//   margin: 20,
+//   padding: 20,
+//   border: '1px solid #DDD'
+// }
 
-const Layout = props => (
-  <div style={layoutStyle}>
-    <Header />
-    {props.children}
-  </div>
-);
+// const Layout = props => (
+//   <div style={layoutStyle}>
+//     <Header />
+//     {props.children}
+//   </div>
+// )
 
-export default Layout;
+const Layout = (props) => {
+  return (
+    <div id='Layout'>
+      <Header />
+      {props.children}
+    </div>
+  )
+}
+
+export default Layout

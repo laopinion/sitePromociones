@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Search from '../components/Search-layout.jsx'
+import Search from '../Search'
 
 class SearchContainer extends Component {
   constructor (props) {
