@@ -1,43 +1,24 @@
 import React, { Component } from 'react'
 
-import SlidesLayout from '../components/Slides-layout.jsx'
+import Slides from '../Slides'
 
-import slideOne from '../../img/products/mayo/slide-1.jpg'
-import slideTwo from '../../img/products/mayo/slide-2.jpg'
+const slide1 = '/static/products/mayo/slide-1.jpg'
+const slide2 = '/static/products/mayo/slide-2.jpg'
 
-import slideOneMovil from '../../img/movil/mayo/slide-1.jpg'
-import slideTwoMovil from '../../img/movil/mayo/slide-2.jpg'
+// import slideOneMovil from '../../img/movil/mayo/slide-1.jpg'
+// import slideTwoMovil from '../../img/movil/mayo/slide-2.jpg'
 
-const screenWith = window.innerWidth
+// const screenWith = window.innerWidth
 
-let slide1 = slideOne
-let slide2 = slideTwo
+// let slide1 = slideOne
+// let slide2 = slideTwo
 
-if (screenWith <= 480) {
-  slide1 = slideOneMovil
-  slide2 = slideTwoMovil
-}
+// if (screenWith <= 480) {
+//   slide1 = slideOneMovil
+//   slide2 = slideTwoMovil
+// }
 
-const slides = [
-  {
-    src: slide1,
-    title: 'Picatodo',
-    slug: 'picatodo'
-  },
-  {
-    src: slide2,
-    title: 'Sandwichera',
-    slug: 'sandwichera'
-  }
-]
-
-/*
-  img de pruebas -> https://www.pexels.com/
-*/
-
-// let slideIndex = 1
-
-class Slides extends Component {
+class SlidesContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -61,7 +42,6 @@ class Slides extends Component {
 
     this.slideIndex = 0
     // this.plusSlides = this.plusSlides.bind(this)
-    window.addEventListener('resize', this.update)
   }
 
   plusSlides (n) {
@@ -129,30 +109,32 @@ class Slides extends Component {
     this.showSlides(this.slideIndex)
     this.carousel()
     this.update()
+
+    window.addEventListener('resize', this.update)
   }
 
   update = () => {
-    let screenWith = this.state.width || window.innerWidth
+    // let screenWith = this.state.width || window.innerWidth
 
-    if (screenWith <= 480) {
-      slide1 = slideOneMovil
-      slide2 = slideTwoMovil
-    } else {
-      slide1 = slideOne
-      slide2 = slideTwo
-    }
+    // if (screenWith <= 480) {
+    //   slide1 = slideOneMovil
+    //   slide2 = slideTwoMovil
+    // } else {
+    //   slide1 = slideOne
+    //   slide2 = slideTwo
+    // }
 
     this.setState({
       height: window.innerHeight,
-      width: window.innerWidth,
-      slides: [{...this.state.slides[0], src: slide1}, {...this.state.slides[1], src: slide2}]
+      width: window.innerWidth
+      // slides: [{ ...this.state.slides[0], src: slide1 }, { ...this.state.slides[1], src: slide2 }]
     })
   }
 
   render () {
     // console.log(this.state)
     return (
-      <SlidesLayout>
+      <Slides>
         <ul>
           {
             this.state.slides.map((item, index) => {
@@ -175,9 +157,9 @@ class Slides extends Component {
             </div>
           </div>
         </ul>
-      </SlidesLayout>
+      </Slides>
     )
   }
 }
 
-export default Slides
+export default SlidesContainer

@@ -1,4 +1,7 @@
+import Head from 'next/head'
 import Header from './Header'
+import Footer from './containers/Footer'
+import './normalize.scss'
 import './app.sass'
 
 // const layoutStyle = {
@@ -14,11 +17,34 @@ import './app.sass'
 //   </div>
 // )
 
-const Layout = (props) => {
+const Layout = ({ children, title }) => {
   return (
     <div id='Layout'>
+      <Head>
+        <title>{`${title} - La opinión`}</title>
+
+        <meta charSet='UTF-8' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
+        />
+
+        <link rel='shortcut icon' type='image/x-icon' href='/static/favicon/favicon.ico' />
+        <link rel='apple-touch-icon' sizes='180x180' href='/static/favicon/apple-touch-icon.png' />
+        <link rel='icon' type='image/png' sizes='32x32' href='/static/favicon/favicon-32x32.png' />
+        <link rel='icon' type='image/png' sizes='16x16' href='/static/favicon/favicon-16x16.png' />
+        <link rel='manifest' href='/static/favicon/site.webmanifest' />
+        <link rel='mask-icon' href='/static/favicon/safari-pinned-tab.svg' color='#5bbad5' />
+        <meta name='msapplication-TileColor' content='#da532c' />
+        <meta name='theme-color' content='#ffffff' />
+
+      </Head>
       <Header />
-      {props.children}
+
+      {children}
+
+      <Footer />
+
     </div>
   )
 }

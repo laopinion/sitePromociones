@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import FooterLayout from '../components/Footer-layout.jsx'
-import FormFooter from '../components/Form-footer.jsx'
+import Footer from '../Footer'
+import FooterForm from '../FooterForm'
 
-class Footer extends Component {
+class FooterContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -86,12 +86,12 @@ class Footer extends Component {
 
   render () {
     return (
-      <FooterLayout ano={this.state.ano}>
+      <Footer ano={this.state.ano}>
         {
           this.state.status === 200 || this.state.status === 500 ? (
             <p className='message'>{this.state.message}</p>
           ) : (
-            <FormFooter
+            <FooterForm
               setRefName={this.setInputName}
               setRefLastname={this.setRefLastname}
               setRefEmail={this.setRefEmail}
@@ -103,9 +103,9 @@ class Footer extends Component {
             />
           )
         }
-      </FooterLayout>
+      </Footer>
     )
   }
 }
 
-export default Footer
+export default FooterContainer

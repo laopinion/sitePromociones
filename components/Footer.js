@@ -1,13 +1,7 @@
-import React from 'react'
-import './footer.sass'
-import tel from '../../img/tel.png'
-import telMovil from '../../img/movil/tel.png'
-import deleitese from '../../img/deleitese.png'
-import op from '../../img/opinion.png'
-import qhubo from '../../img/qhubo.png'
-import logoOp from '../../img/opcom.png'
 
-const FooterLayout = (props) => {
+import './footer.sass'
+
+const Footer = (props) => {
   const { ano } = props
   return (
     <footer id='Footer'>
@@ -21,8 +15,8 @@ const FooterLayout = (props) => {
           <div className='telefonos_logos'>
             <div className='row-1'>
               <figure>
-                <img className='desktop' src={tel} alt='Teléfonos' />
-                <img className='movil' src={telMovil} alt='Teléfonos' />
+                <img className='desktop' src='/static/images/tel.png' alt='Teléfonos' />
+                <img className='movil' src='/static/movil/tel.png' alt='Teléfonos' />
               </figure>
               <p>Para saber más acerca de nuestros productos y promocionales llámanos a nuestra línea de atención al cliente.</p>
             </div>
@@ -30,13 +24,13 @@ const FooterLayout = (props) => {
               <h4>Visita también</h4>
               <figure className='logos'>
                 <a href='http://deleitese.co' target='_blank'>
-                  <img src={deleitese} alt='deleitese' />
+                  <img src='/static/images/deleitese.png' alt='deleitese' />
                 </a>
                 <a href='https://laopinion.com.co' target='_blank'>
-                  <img src={op} alt='La Opinión' />
+                  <img src='/static/images/op.png' alt='La Opinión' />
                 </a>
                 <a href='https://www.instagram.com/qhubocucuta' target='_blank'>
-                  <img src={qhubo} alt='Qhubo' />
+                  <img src='/static/images/qhubo.png' alt='Qhubo' />
                 </a>
               </figure>
             </div>
@@ -44,7 +38,7 @@ const FooterLayout = (props) => {
         </div>
         <div className='info'>
           <figure>
-            <img src={logoOp} alt='laopinion.com.co' />
+            <img src='/static/images/opcom.png' alt='laopinion.com.co' />
           </figure>
           <hr />
           <p>DIARIO LA OPINIÓN - Av. 4 Nro. 16 - 12. Teléfono 09 7 5829999 - Fax 09 7 5717859 - Cúcuta - Colombia
@@ -74,4 +68,5 @@ const FooterLayout = (props) => {
     </footer>
   )
 }
-export default FooterLayout
+
+export default Footer

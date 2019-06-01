@@ -1,11 +1,11 @@
-import React from 'react'
 import Recaptcha from 'react-google-invisible-recaptcha'
-import Preloader from '../components/Preloader.jsx'
+import Preloader from './Preloader'
 
-const FormFooter = (props) => {
+const FooterForm = (props) => {
   const style = {
     display: props.preloader ? 'none' : 'block'
   }
+
   return (
     <form id='formContactenos' onSubmit={props.handleSubscription}>
       {
@@ -53,4 +53,4 @@ const FormFooter = (props) => {
   )
 }
 
-export default FormFooter
+export default FooterForm

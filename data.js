@@ -1,15 +1,15 @@
-import destacado1 from '/static/products/mayo/slide-1.jpg'
-import destacado2 from '/static/products/mayo/slide-2.jpg'
-import destacado3 from '/static/products/slideProduct_3.jpg'
-import destacado4 from '/static/products/slideProduct_4.jpg'
+const slide1 = '/static/products/mayo/slide-1.jpg'
+const slide2 = '/static/products/mayo/slide-2.jpg'
+const destacado3 = '/static/products/slideProduct_3.jpg'
+const destacado4 = '/static/products/slideProduct_4.jpg'
 
-import product1 from '/static/products/mayo/product_1.jpg'
-import product2 from '/static/products/mayo/product_2.jpg'
-import product3 from '/static/products/product_3.jpg'
-import product4 from '/static/products/product_4.jpg'
+const product1 = '/static/products/mayo/product_1.jpg'
+const product2 = '/static/products/mayo/product_2.jpg'
+const product3 = '/static/products/product_3.jpg'
+const product4 = '/static/products/product_4.jpg'
 
-// import destacado1Movil from '/static/movil/mayo/slide-1.jpg'
-// import destacado2Movil from '/static/movil/mayo/slide-2.jpg'
+// const destacado1Movil = '/static/movil/mayo/slide-1.jpg'
+// const destacado2Movil = '/static/movil/mayo/slide-2.jpg'
 
 // const screenWith = window.innerWidth
 // let slide1 = destacado1
@@ -42,13 +42,13 @@ const listProducts = [
       {
         id: '0001',
         title: 'Aspiradora para auto',
-        src: destacado1,
+        src: slide1,
         id_parent: '001'
       },
       {
         id: '0002',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
-        src: destacado2,
+        src: slide2,
         id_parent: '001'
       },
       {
@@ -86,13 +86,13 @@ const listProducts = [
       {
         id: '0001',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-001.',
-        src: destacado2,
+        src: slide2,
         id_parent: '002'
       },
       {
         id: '0002',
         title: 'Balones',
-        src: destacado1,
+        src: slide1,
         id_parent: '002'
       },
       {
@@ -143,13 +143,13 @@ const listProducts = [
       {
         id: '0002',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
-        src: destacado1,
+        src: slide1,
         id_parent: '003'
       },
       {
         id: '0003',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.',
-        src: destacado2,
+        src: slide2,
         id_parent: '002'
       },
       {
@@ -191,13 +191,13 @@ const listProducts = [
       {
         id: '0002',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
-        src: destacado1,
+        src: slide1,
         id_parent: '003'
       },
       {
         id: '0003',
         title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.',
-        src: destacado2,
+        src: slide2,
         id_parent: '002'
       },
       {
