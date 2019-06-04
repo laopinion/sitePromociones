@@ -142,7 +142,7 @@ class SlidesContainer extends Component {
             this.state.slides.map((item, index) => {
               return (
                 <li key={index} className='mySlides'>
-                  <Link as={`/producto/${item.slug}`} href={`/producto?slug=${item.slug}`}>
+                  <Link as={`/productos/${item.slug}`} href={`/producto?slug=${item.slug}`}>
                     <a><img src={item.src} alt={item.title} /></a>
                   </Link>
                 </li>

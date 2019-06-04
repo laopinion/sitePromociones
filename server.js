@@ -1,11 +1,11 @@
 const express = require('express')
-const next = require('next')
+const app = require('./app')
+const routes = require('./routes')
 const bodyParser = require('body-parser')
 const request = require('superagent')
+
 const { PORT, LISTID, API_KEY, SECRET_CAPTCHA } = require('./config')
 
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
 const handle = app.getRequestHandler()
 
 app
@@ -22,15 +22,17 @@ app
     //   app.render(req, res, actualPage, queryParams)
     // })
 
-    server.get('/producto/:slug', (req, res) => {
-      const actualPage = '/product'
-      const queryParams = { slug: req.params.slug }
-      app.render(req, res, actualPage, queryParams)
-    })
+    server.use('/', routes)
 
-    server.get('/producto', (req, res) => {
-      app.render(req, res, '/productos')
-    })
+    // server.get('/producto/:slug', (req, res) => {
+    //   const actualPage = '/product'
+    //   const queryParams = { slug: req.params.slug }
+    //   app.render(req, res, actualPage, queryParams)
+    // })
+
+    // server.get('/producto', (req, res) => {
+    //   app.render(req, res, '/productos')
+    // })
 
     server.get('*', (req, res) => {
       return handle(req, res)

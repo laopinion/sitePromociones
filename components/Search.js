@@ -21,7 +21,7 @@ const Search = (props) => {
             return (
               <li key={index}>
                 <h3>
-                  <a href={`/producto/${item.slug}`}>
+                  <a href={`/productos/${item.slug}`}>
                     {item.title}
                   </a>
                 </h3>
