@@ -1,26 +1,14 @@
 import React, { Component } from 'react'
-
+import Link from 'next/link'
 import Slides from '../Slides'
-
-const slide1 = '/static/products/mayo/slide-1.jpg'
-const slide2 = '/static/products/mayo/slide-2.jpg'
-
-// import slideOneMovil from '../../img/movil/mayo/slide-1.jpg'
-// import slideTwoMovil from '../../img/movil/mayo/slide-2.jpg'
-
-// const screenWith = window.innerWidth
-
-// let slide1 = slideOne
-// let slide2 = slideTwo
-
-// if (screenWith <= 480) {
-//   slide1 = slideOneMovil
-//   slide2 = slideTwoMovil
-// }
 
 class SlidesContainer extends Component {
   constructor (props) {
     super(props)
+
+    let slide1 = '/static/products/mayo/slide-1.jpg'
+    let slide2 = '/static/products/mayo/slide-2.jpg'
+
     this.state = {
       // slideIndex: 1
       value: 1,
@@ -39,6 +27,8 @@ class SlidesContainer extends Component {
         }
       ]
     }
+
+    this.timeSlide = null
 
     this.slideIndex = 0
     // this.plusSlides = this.plusSlides.bind(this)
@@ -99,10 +89,12 @@ class SlidesContainer extends Component {
       this.slideIndex = 1
     }
 
-    x[this.slideIndex - 1].style.display = 'block'
-    dots[this.slideIndex - 1].className += ' active'
+    if (x.length) {
+      x[this.slideIndex - 1].style.display = 'block'
+      dots[this.slideIndex - 1].className += ' active'
+    }
 
-    setTimeout(this.carousel, 5000) // Change image every 2 seconds
+    this.timeSlide = setTimeout(this.carousel, 5000) // Change image every 2 seconds
   }
 
   componentDidMount () {
@@ -114,21 +106,31 @@ class SlidesContainer extends Component {
   }
 
   update = () => {
-    // let screenWith = this.state.width || window.innerWidth
+    let screenWith = this.state.width || window.innerWidth
+    // console.log(screenWith)
 
-    // if (screenWith <= 480) {
-    //   slide1 = slideOneMovil
-    //   slide2 = slideTwoMovil
-    // } else {
-    //   slide1 = slideOne
-    //   slide2 = slideTwo
-    // }
+    let slide1 = '/static/products/mayo/slide-1.jpg'
+    let slide2 = '/static/products/mayo/slide-2.jpg'
+
+    if (screenWith <= 480) {
+      slide1 = '/static/movil/mayo/slide-1.jpg'
+      slide2 = '/static/movil/mayo/slide-2.jpg'
+    }
 
     this.setState({
       height: window.innerHeight,
-      width: window.innerWidth
-      // slides: [{ ...this.state.slides[0], src: slide1 }, { ...this.state.slides[1], src: slide2 }]
+      width: window.innerWidth,
+      slides: [{ ...this.state.slides[0], src: slide1 }, { ...this.state.slides[1], src: slide2 }]
     })
+  }
+
+  componentWillUnmount () {
+    this.update()
+    window.removeEventListener('resize', this.update)
+
+    if (document.getElementsByClassName('mySlides').length) {
+      clearTimeout(this.timeSlide)
+    }
   }
 
   render () {
@@ -140,9 +142,9 @@ class SlidesContainer extends Component {
             this.state.slides.map((item, index) => {
               return (
                 <li key={index} className='mySlides'>
-                  <a href={`/producto/${item.slug}`}>
-                    <img src={item.src} alt={item.title} />
-                  </a>
+                  <Link as={`/producto/${item.slug}`} href={`/producto?slug=${item.slug}`}>
+                    <a><img src={item.src} alt={item.title} /></a>
+                  </Link>
                 </li>
               )
             })
@@ -157,6 +159,11 @@ class SlidesContainer extends Component {
             </div>
           </div>
         </ul>
+        <style jsx>{`
+          .mySlides {
+            display: none;
+          }
+        `}</style>
       </Slides>
     )
   }

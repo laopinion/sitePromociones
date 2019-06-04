@@ -1,5 +1,8 @@
 const slide1 = '/static/products/mayo/slide-1.jpg'
 const slide2 = '/static/products/mayo/slide-2.jpg'
+const slide1m = '/static/movil/mayo/slide-1.jpg'
+const slide2m = '/static/movil/mayo/slide-2.jpg'
+
 const destacado3 = '/static/products/slideProduct_3.jpg'
 const destacado4 = '/static/products/slideProduct_4.jpg'
 
@@ -7,18 +10,6 @@ const product1 = '/static/products/mayo/product_1.jpg'
 const product2 = '/static/products/mayo/product_2.jpg'
 const product3 = '/static/products/product_3.jpg'
 const product4 = '/static/products/product_4.jpg'
-
-// const destacado1Movil = '/static/movil/mayo/slide-1.jpg'
-// const destacado2Movil = '/static/movil/mayo/slide-2.jpg'
-
-// const screenWith = window.innerWidth
-// let slide1 = destacado1
-// let slide2 = destacado2
-
-// if (screenWith <= 480) {
-//   slide1 = destacado1Movil
-//   slide2 = destacado2Movil
-// }
 
 const listProducts = [
   {
@@ -37,6 +28,7 @@ const listProducts = [
       </p>
     `,
     slide: slide1,
+    slideM: slide1m,
     slug: 'picatodo',
     subproducts: [
       {
@@ -81,6 +73,7 @@ const listProducts = [
       </p>
     `,
     slide: slide2,
+    slideM: slide2m,
     slug: 'sandwichera',
     subproducts: [
       {

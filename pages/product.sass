@@ -1,0 +1,81 @@
+@import '../components/colores'
+#Product
+  figure
+    margin: 0
+  img
+    max-height: 585px
+    object-fit: cover
+    width: 100%
+  .container
+    margin: 100px auto
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+  
+  h2
+    margin: 0
+
+  h3
+    color: #333333
+    text-transform: lowercase
+  h3:first-letter
+    text-transform: uppercase
+
+  p
+    color: #333333
+  
+  .info
+    max-width: 600px
+    margin: 0 auto 50px
+
+  .no__products
+    margin: 30px auto
+    text-align: center
+    font-weight: 700
+  
+  .title, .description
+    color: $gris_1
+  .title
+    font-weight: 700
+    margin: 0 0 22px
+    font-size: 2rem
+    text-align: center
+  .description
+    font-weight: 400
+  .btn_payu
+    margin: 0 auto
+  .btn_buy.inactive
+    background-color: #bdbdbd
+    cursor: initial
+    span
+      color: #ffffff
+  .btn_buy
+    height: 42px
+    background-color: $rojo_1
+    text-transform: uppercase
+    border: none
+    margin: 0 auto
+    display: block
+    cursor: pointer
+    position: relative
+    width: 380px
+    &:after
+      content: ""
+      border-bottom: 1px solid $rojo_2
+      border-right: 1px solid $rojo_2
+      border-left: 1px solid $rojo_2
+      position: absolute
+      bottom: -5px
+      left: -5px
+      height: 15px
+      width: 102%
+    a
+      color: #ffffff
+      display: flex
+      text-decoration: none
+      justify-content: center
+      align-items: center
+      height: 100%
+@media screen and (max-width: 480px)
+  #Product .btn_buy
+    width: 320px

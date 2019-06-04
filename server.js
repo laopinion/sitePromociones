@@ -16,10 +16,20 @@ app
     server.use(bodyParser.json())
     server.use(bodyParser.urlencoded({ extended: false }))
 
-    server.get('/p/:id', (req, res) => {
-      const actualPage = '/post'
-      const queryParams = { title: req.params.id }
+    // server.get('/p/:id', (req, res) => {
+    //   const actualPage = '/post'
+    //   const queryParams = { title: req.params.id }
+    //   app.render(req, res, actualPage, queryParams)
+    // })
+
+    server.get('/producto/:slug', (req, res) => {
+      const actualPage = '/product'
+      const queryParams = { slug: req.params.slug }
       app.render(req, res, actualPage, queryParams)
+    })
+
+    server.get('/producto', (req, res) => {
+      app.render(req, res, '/productos')
     })
 
     server.get('*', (req, res) => {

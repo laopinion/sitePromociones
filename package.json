@@ -8,7 +8,6 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "startWind": "cross-env NODE_ENV=production node server.js",
-    "deploybot": "babel server -d dist/server",
     "lint": "standard --fix"
   },
   "standard": {

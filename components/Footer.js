@@ -27,7 +27,7 @@ const Footer = (props) => {
                   <img src='/static/images/deleitese.png' alt='deleitese' />
                 </a>
                 <a href='https://laopinion.com.co' target='_blank'>
-                  <img src='/static/images/op.png' alt='La Opinión' />
+                  <img src='/static/images/opinion.png' alt='La Opinión' />
                 </a>
                 <a href='https://www.instagram.com/qhubocucuta' target='_blank'>
                   <img src='/static/images/qhubo.png' alt='Qhubo' />

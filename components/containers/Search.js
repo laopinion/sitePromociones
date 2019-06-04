@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Search from '../Search'
+import data from '../../data'
 
 class SearchContainer extends Component {
   constructor (props) {
@@ -23,7 +24,7 @@ class SearchContainer extends Component {
     // Aca se puede enviar todos los datos con un post
     const results = []
 
-    this.props.listProducts.filter((item) => {
+    data.filter((item) => {
       // console.log(item);
       const title = item.title.toLowerCase()
       const query = this.input.value.toLowerCase()
@@ -80,7 +81,7 @@ class SearchContainer extends Component {
 
     const results = []
 
-    this.props.listProducts.filter((item) => {
+    data.filter((item) => {
       // console.log(item);
       const title = item.title.toLowerCase()
       const query = this.input.value.toLowerCase()
