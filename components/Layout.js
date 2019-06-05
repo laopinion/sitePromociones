@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from './Header'
 import Footer from './containers/Footer'
+import Script from './Script'
 import './normalize.scss'
 import './app.sass'
 
@@ -44,6 +45,19 @@ const Layout = ({ children, title }) => {
       {children}
 
       <Footer />
+
+      <script async src='https://www.googletagmanager.com/gtag/js?id=UA-141172940-1' />
+      <Script>
+        {
+          () => {
+            window.dataLayer = window.dataLayer || []
+            function gtag () { dataLayer.push(arguments) }
+            gtag('js', new Date())
+
+            gtag('config', 'UA-141172940-1')
+          }
+        }
+      </Script>
 
     </div>
   )
