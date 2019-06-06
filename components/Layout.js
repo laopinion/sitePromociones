@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Header from './Header'
 import Footer from './containers/Footer'
-import Script from './Script'
+import Router from 'next/router'
+import * as gtag from '../helpers/gtag'
 import './normalize.scss'
 import './app.sass'
 
@@ -17,6 +18,13 @@ import './app.sass'
 //     {props.children}
 //   </div>
 // )
+
+Router.onRouteChangeComplete = url => {
+  const NODE_ENV = process.env.NODE_ENV
+  if (NODE_ENV !== 'development') {
+    gtag.trackPageView(url)
+  }
+}
 
 const Layout = ({ children, title }) => {
   return (
@@ -45,19 +53,6 @@ const Layout = ({ children, title }) => {
       {children}
 
       <Footer />
-
-      <script async src='https://www.googletagmanager.com/gtag/js?id=UA-141172940-1' />
-      <Script>
-        {
-          () => {
-            window.dataLayer = window.dataLayer || []
-            function gtag () { dataLayer.push(arguments) }
-            gtag('js', new Date())
-
-            gtag('config', 'UA-141172940-1')
-          }
-        }
-      </Script>
 
     </div>
   )
