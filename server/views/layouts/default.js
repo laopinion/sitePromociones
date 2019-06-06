@@ -45,9 +45,12 @@ class Layout extends Component {
           <meta name='theme-color' content='#ffffff' />
           {/* Se agrego un cambio al title */}
           <title>{`${this.props.title} - La opinión`}</title>
+          {this.props.isDeveloping && <link rel='stylesheet' href={`/css/${this.props.page}.css`} />}
         </head>
         <body>
           {this.props.children}
+
+          {this.props.isDeveloping && <script src={`/js/${this.props.page}.js`} />}
 
           {
             !this.props.isDeveloping && (

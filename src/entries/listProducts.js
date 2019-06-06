@@ -1,15 +1,15 @@
-import destacado1 from '../img/products/mayo/slide-1.jpg'
-import destacado2 from '../img/products/mayo/slide-2.jpg'
-import destacado3 from '../img/products/slideProduct_3.jpg'
-import destacado4 from '../img/products/slideProduct_4.jpg'
+const destacado1 = '/products/mayo/slide-1.jpg'
+const destacado2 = '/products/mayo/slide-2.jpg'
+const destacado3 = '/products/slideProduct_3.jpg'
+const destacado4 = '/products/slideProduct_4.jpg'
 
-import product1 from '../img/products/mayo/product_1.jpg'
-import product2 from '../img/products/mayo/product_2.jpg'
-import product3 from '../img/products/product_3.jpg'
-import product4 from '../img/products/product_4.jpg'
+const product1 = '/products/mayo/product_1.jpg'
+const product2 = '/products/mayo/product_2.jpg'
+const product3 = '/products/product_3.jpg'
+const product4 = '/products/product_4.jpg'
 
-import destacado1Movil from '../img/movil/mayo/slide-1.jpg'
-import destacado2Movil from '../img/movil/mayo/slide-2.jpg'
+const destacado1Movil = '/movil/mayo/slide-1.jpg'
+const destacado2Movil = '/movil/mayo/slide-2.jpg'
 
 const screenWith = window.innerWidth
 let slide1 = destacado1

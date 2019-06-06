@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 
 import SlidesLayout from '../components/Slides-layout.jsx'
 
-import slideOne from '../../img/products/mayo/slide-1.jpg'
-import slideTwo from '../../img/products/mayo/slide-2.jpg'
+const slideOne = '/products/mayo/slide-1.jpg'
+const slideTwo = '/products/mayo/slide-2.jpg'
 
-import slideOneMovil from '../../img/movil/mayo/slide-1.jpg'
-import slideTwoMovil from '../../img/movil/mayo/slide-2.jpg'
+const slideOneMovil = '/movil/mayo/slide-1.jpg'
+const slideTwoMovil = '/movil/mayo/slide-2.jpg'
 
 const screenWith = window.innerWidth
 
@@ -145,7 +145,7 @@ class Slides extends Component {
     this.setState({
       height: window.innerHeight,
       width: window.innerWidth,
-      slides: [{...this.state.slides[0], src: slide1}, {...this.state.slides[1], src: slide2}]
+      slides: [{ ...this.state.slides[0], src: slide1 }, { ...this.state.slides[1], src: slide2 }]
     })
   }
 
