@@ -2,8 +2,8 @@ import React from 'react'
 import './info.sass'
 
 const SlideProduct = (props) => {
-  const {slide, title, description, active} = props
-  console.log(active)
+  const { slide, title, description, active } = props
+  // console.log(active)
   return (
     <section id='SlideProduct'>
       <figure>
@@ -16,7 +16,7 @@ const SlideProduct = (props) => {
         </div>
         <div className='info'>
           {/* <p>{description}</p> */}
-          <p dangerouslySetInnerHTML={{__html: description}} />
+          <p dangerouslySetInnerHTML={{ __html: description }} />
         </div>
 
         {
