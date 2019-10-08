@@ -2,7 +2,7 @@ import React from 'react'
 import './info.sass'
 
 const SlideProduct = (props) => {
-  const { slide, title, description, active } = props
+  const { slide, title, description, active, special } = props
   // console.log(active)
   return (
     <section id='SlideProduct'>
@@ -14,10 +14,49 @@ const SlideProduct = (props) => {
         <div className='title'>
           <h2>{title}</h2>
         </div>
-        <div className='info'>
-          {/* <p>{description}</p> */}
-          <p dangerouslySetInnerHTML={{ __html: description }} />
-        </div>
+
+        {!special ? (
+          <div className='info'>
+            {/* <p>{description}</p> */}
+            <p dangerouslySetInnerHTML={{ __html: description }} />
+          </div>
+        ) : (
+          <div className='special info'>
+            <ul>
+              <li>
+                <h2>DESCRIPCIÓN Y FUNCIONALIDAD</h2>
+                <p>
+                  Plancha de vapor portátil, vertical, eficiente y fácil de manejar. Incluye cepillo quita pelusas, removible.
+                </p>
+              </li>
+              <li>
+                <h2>INSTRUCCIONES DE SEGURIDAD</h2>
+                <p>
+                  - Cuando el aparato este caliente agárrelo solo por el mango <br /> <br />
+                  - Nunca coloque sus manos sobre el vaporizador o sobre las partes metálicas calientes. <br /> <br />
+                  - No debe abrir la abertura de llenado del depósito de agua mientras la plancha esté en uso. Quite el
+                  enchufe de la toma de corriente y permita que el dispositivo se enfríe por completo. <br /> <br />
+                  - Nunca planche la ropa mientras la lleva puesta. <br /> <br />
+                </p>
+              </li>
+              <li>
+                <h2>DESCRIPCIÓN PARTES DEL PRODUCTO</h2>
+                <p>
+                  1. TANQUE DE AGUA <br /> <br />
+                  2. CEPILLO DE PELUSA <br /> <br />
+                  3. PLIEGUES <br /> <br />
+                  4. INTERRUPTOR DE VAPOR <br /> <br />
+                  5. INDICADOR <br /> <br />
+                </p>
+              </li>
+              <li>
+                <img src='/images/plancha.jpg' alt='plancha' />
+              </li>
+            </ul>
+
+            <p className='domicilio'>En máximo dos días se hará la respectiva entrega del optativo. Aplica para Cúcuta y su área metropolitana.</p>
+          </div>
+        )}
 
         {
           active ? (

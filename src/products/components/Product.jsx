@@ -1,19 +1,22 @@
 import React from 'react'
 
-const Product = (props) => {
+const Product = ({slug, src, title, active, special, summary}) => {
   // console.log(props)
   return (
     <div className='Product'>
       <figure>
-        <a href={`/producto/${props.slug}`}>
-          <img src={props.src} alt={props.alt} />
+        <a href={`/producto/${slug}`}>
+          <img src={src} alt={title} />
         </a>
       </figure>
       <div className='info'>
-        <h4 className='title'>{props.title}</h4>
-        {/* <p className='description'>{props.description}</p> */}
-        <button className={`btn_buy ${!props.active ? ('inactive') : ('')}`}>
-          <a href={`/producto/${props.slug}`}>Comprar</a>
+        <h4 className='title'>{title}</h4>
+        {special && (
+          <p>{summary}</p>
+        )}
+        {/* <p className='description'>{description}</p> */}
+        <button className={`btn_buy ${!active ? ('inactive') : ('')}`}>
+          <a href={`/producto/${slug}`}>Comprar</a>
         </button>
       </div>
       <hr />

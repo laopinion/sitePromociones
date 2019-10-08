@@ -4,18 +4,20 @@ import SlidesLayout from '../components/Slides-layout.jsx'
 
 const slideOne = '/products/mayo/slide-1.jpg'
 const slideTwo = '/products/mayo/slide-2.jpg'
+const plancha = '/products/octubre/slide-1.jpg'
 
 const slideOneMovil = '/movil/mayo/slide-1.jpg'
 const slideTwoMovil = '/movil/mayo/slide-2.jpg'
+const planchaMovil = '/movil/octubre/slide-1.jpg'
 
 const screenWith = window.innerWidth
 
-let slide1 = slideOne
-let slide2 = slideTwo
+let slide1 = plancha
+// let slide2 = slideTwo
 
 if (screenWith <= 480) {
-  slide1 = slideOneMovil
-  slide2 = slideTwoMovil
+  slide1 = planchaMovil
+  // slide2 = slideTwoMovil
 }
 
 // const slides = [
@@ -48,13 +50,8 @@ class Slides extends Component {
       slides: [
         {
           src: slide1,
-          title: 'Picatodo',
-          slug: 'picatodo'
-        },
-        {
-          src: slide2,
-          title: 'Sandwichera',
-          slug: 'sandwichera'
+          title: 'Plancha',
+          slug: 'plancha'
         }
       ]
     }
@@ -135,17 +132,16 @@ class Slides extends Component {
     let screenWith = this.state.width || window.innerWidth
 
     if (screenWith <= 480) {
-      slide1 = slideOneMovil
-      slide2 = slideTwoMovil
+      slide1 = planchaMovil
     } else {
-      slide1 = slideOne
-      slide2 = slideTwo
+      slide1 = plancha
     }
 
     this.setState({
       height: window.innerHeight,
       width: window.innerWidth,
-      slides: [{ ...this.state.slides[0], src: slide1 }, { ...this.state.slides[1], src: slide2 }]
+      slides: [{ ...this.state.slides[0], src: slide1 }]
+      // slides: [{ ...this.state.slides[0], src: slide1 }, { ...this.state.slides[1], src: slide2 }]
     })
   }
 
