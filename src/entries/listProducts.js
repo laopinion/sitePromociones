@@ -3,6 +3,9 @@ const destacado2 = '/products/mayo/slide-2.jpg'
 const destacado3 = '/products/slideProduct_3.jpg'
 const destacado4 = '/products/slideProduct_4.jpg'
 
+const plancha = '/products/octubre/slide-1.jpg'
+const productplancha = '/products/octubre/product_1.jpg'
+
 const product1 = '/products/mayo/product_1.jpg'
 const product2 = '/products/mayo/product_2.jpg'
 const product3 = '/products/product_3.jpg'
@@ -10,22 +13,71 @@ const product4 = '/products/product_4.jpg'
 
 const destacado1Movil = '/movil/mayo/slide-1.jpg'
 const destacado2Movil = '/movil/mayo/slide-2.jpg'
+const planchaMovil = '/movil/octubre/slide-1.jpg'
 
 const screenWith = window.innerWidth
 let slide1 = destacado1
 let slide2 = destacado2
+let slide3 = plancha
 
 if (screenWith <= 480) {
   slide1 = destacado1Movil
   slide2 = destacado2Movil
+  slide3 = planchaMovil
 }
 
 const listProducts = [
   {
+    id: '005',
+    src: productplancha,
+    title: 'Plancha a vapor portátil',
+    active: true,
+    special: true,
+    summary: 'Plancha de vapor portátil, vertical, eficiente y fácil de manejar. Incluye cepillo quita pelusas, removible.',
+    description: `
+      <h3>Características</h3>
+      <p>
+        •	Capacidad 500 ml <br/>
+        •	Aspas mezcladoras <br/>
+        •	Cuchillas en acero inoxidables <br/>
+        •	Botón de turbo <br/>
+        •	Vaso plástico transparente <br/>
+      </p>
+    `,
+    slide: slide3,
+    slug: 'plancha',
+    subproducts: [
+      {
+        id: '0001',
+        title: 'Aspiradora para auto',
+        src: destacado1,
+        id_parent: '001'
+      },
+      {
+        id: '0002',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
+        src: destacado2,
+        id_parent: '001'
+      },
+      {
+        id: '0003',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.',
+        src: destacado3,
+        id_parent: '001'
+      },
+      {
+        id: '0004',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.',
+        src: destacado4,
+        id_parent: '001'
+      }
+    ]
+  },
+  {
     id: '001',
     src: product1,
     title: 'Picatodo',
-    active: true,
+    active: false,
     description: `
       <h3>Características</h3>
       <p>
@@ -69,7 +121,7 @@ const listProducts = [
     id: '002',
     src: product2,
     title: 'Sandwichera',
-    active: true,
+    active: false,
     description: `
       <h3>Características</h3>
       <p>
