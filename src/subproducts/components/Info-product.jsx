@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 import './info.sass'
 
 const SlideProduct = (props) => {
-  const { slide, title, description, active, special } = props
+  const { slide, title, description, active, special, slug } = props
   // console.log(active)
   return (
     <section id='SlideProduct'>
@@ -59,7 +59,7 @@ const SlideProduct = (props) => {
         )}
 
         {
-          active ? (
+          slug === 'plancha' ? (
             <div className='btns'>
               <div className='btn_payu'>
                 <p><span>$85.500</span> Sin domicilio</p>
@@ -100,6 +100,87 @@ const SlideProduct = (props) => {
                   <input name='sourceUrl' id='urlOrigen' value='' type='hidden' />
                   <input name='buttonType' value='SIMPLE' type='hidden' />
                   <input name='signature' value='bc694fe926437893834f0baccfaa83350da4f7356989ce6d0685cc9e400a8f16' type='hidden' />
+                </form>
+              </div>
+            </div>
+          ) : slug === 'autos' ? (
+            <div className='btns'>
+              <div className='btn_payu'>
+                <p><span>$22.500</span> Sin domicilio</p>
+                <form method='post' action='https://gateway.payulatam.com/ppp-web-gateway/pb.zul' accept-charset='UTF-8'>
+                  <input type='image' border='0' alt='' src='https://promociones.laopinion.com.co/images/btn_pago.jpg' onClick='this.form.urlOrigen.value = window.location.href;' />
+                  <input name='buttonId' type='hidden' value='8o7BYWhHUrFv98NdbiKuqSlLALsp8VxyybMg/GEuvyr6qakJVxFWNg==' />
+                  <input name='merchantId' type='hidden' value='561677' />
+                  <input name='accountId' type='hidden' value='564188' />
+                  <input name='description' type='hidden' value='Autos de carrera' />
+                  <input name='referenceCode' type='hidden' value='Auto de carrera' />
+                  <input name='amount' type='hidden' value='22500.00' />
+                  <input name='tax' type='hidden' value='0.00' />
+                  <input name='taxReturnBase' type='hidden' value='0.00' />
+                  <input name='currency' type='hidden' value='COP' />
+                  <input name='lng' type='hidden' value='es' />
+                  <input name='displayBuyerComments' type='hidden' value='true' />
+                  <input name='sourceUrl' id='urlOrigen' value='' type='hidden' />
+                  <input name='buttonType' value='SIMPLE' type='hidden' />
+                  <input name='signature' value='315d7a2dfdf0cfd5d4e55603e49d2bab5a8ee58d71038e604843e4fab4c57fdc' type='hidden' />
+                </form>
+                <p><span>$225.000</span> Sin domicilio coleccion</p>
+                <form method='post' action='https://gateway.payulatam.com/ppp-web-gateway/pb.zul' accept-charset='UTF-8'>
+                  <input type='image' border='0' alt='' src='https://promociones.laopinion.com.co/images/btn_pago.jpg' onClick='this.form.urlOrigen.value = window.location.href;' />
+                  <input name='buttonId' type='hidden' value='49yOJDEa17vN+Jq6PpwcnUZARZaTn+PL+Npr/VpOWO+WefZz2ciCyA==' />
+                  <input name='merchantId' type='hidden' value='561677' />
+                  <input name='accountId' type='hidden' value='564188' />
+                  <input name='description' type='hidden' value='Colección autos de carrera' />
+                  <input name='referenceCode' type='hidden' value='Auto de carrera_ALL' />
+                  <input name='amount' type='hidden' value='225000.00' />
+                  <input name='tax' type='hidden' value='0.00' />
+                  <input name='taxReturnBase' type='hidden' value='0.00' />
+                  <input name='currency' type='hidden' value='COP' />
+                  <input name='lng' type='hidden' value='es' />
+                  <input name='displayBuyerComments' type='hidden' value='true' />
+                  <input name='sourceUrl' id='urlOrigen' value='' type='hidden' />
+                  <input name='buttonType' value='SIMPLE' type='hidden' />
+                  <input name='signature' value='8529c4c7cacf978fee5bcd5e711a1ba7adaa2977a300e2eb8b84ff73643bad47' type='hidden' />
+                </form>
+              </div>
+              <div className='btn_payu'>
+                <p><span>$26.500</span> Con domicilio</p>
+                <form method='post' action='https://gateway.payulatam.com/ppp-web-gateway/pb.zul' accept-charset='UTF-8'>
+                  <input type='image' border='0' alt='' src='https://promociones.laopinion.com.co/images/btn_pago.jpg' onClick='this.form.urlOrigen.value = window.location.href;' />
+                  <input name='buttonId' type='hidden' value='HEp7379fry/LgHHcIRLhN9wIp1qJDOce2QR65i5iLOquk3qhJX4WUA==' />
+                  <input name='merchantId' type='hidden' value='561677' />
+                  <input name='accountId' type='hidden' value='564188' />
+                  <input name='description' type='hidden' value='Auto de carrera_domicilio' />
+                  <input name='referenceCode' type='hidden' value='Auto de carrera_D' />
+                  <input name='amount' type='hidden' value='26500.00' />
+                  <input name='tax' type='hidden' value='0.00' />
+                  <input name='taxReturnBase' type='hidden' value='0.00' />
+                  <input name='shipmentValue' value='0.00' type='hidden' />
+                  <input name='currency' type='hidden' value='COP' />
+                  <input name='lng' type='hidden' value='es' />
+                  <input name='displayBuyerComments' type='hidden' value='true' />
+                  <input name='sourceUrl' id='urlOrigen' value='' type='hidden' />
+                  <input name='buttonType' value='SIMPLE' type='hidden' />
+                  <input name='signature' value='fac6efd8b619597b92d5065bc19394fdcddef06188908eec98d5ca7857bba4fd' type='hidden' />
+                </form>
+                <p><span>$229.000</span> Con domicilio coleccion</p>
+                <form method='post' action='https://gateway.payulatam.com/ppp-web-gateway/pb.zul' accept-charset='UTF-8'>
+                  <input type='image' border='0' alt='' src='https://promociones.laopinion.com.co/images/btn_pago.jpg' onClick='this.form.urlOrigen.value = window.location.href;' />
+                  <input name='buttonId' type='hidden' value='ar5Yd3AHLS8gQ/Qf7cKsZYqZ/Was3GXLSjABKsvwGIpTmlIL51B6NA==' />
+                  <input name='merchantId' type='hidden' value='561677' />
+                  <input name='accountId' type='hidden' value='564188' />
+                  <input name='description' type='hidden' value='Colección de autos de carrera_domicilio' />
+                  <input name='referenceCode' type='hidden' value='Auto de carrera_ALL' />
+                  <input name='amount' type='hidden' value='229000.00' />
+                  <input name='tax' type='hidden' value='0.00' />
+                  <input name='taxReturnBase' type='hidden' value='0.00' />
+                  <input name='shipmentValue' value='0.00' type='hidden' />
+                  <input name='currency' type='hidden' value='COP' />
+                  <input name='lng' type='hidden' value='es' />
+                  <input name='displayBuyerComments' type='hidden' value='true' />
+                  <input name='sourceUrl' id='urlOrigen' value='' type='hidden' />
+                  <input name='buttonType' value='SIMPLE' type='hidden' />
+                  <input name='signature' value='f8e10d491295440292387012827a872380d72c8bd2a39bc28b41ef6c979d9c9e' type='hidden' />
                 </form>
               </div>
             </div>
