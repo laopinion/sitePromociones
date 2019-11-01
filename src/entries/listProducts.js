@@ -4,7 +4,9 @@ const destacado3 = '/products/slideProduct_3.jpg'
 const destacado4 = '/products/slideProduct_4.jpg'
 
 const plancha = '/products/octubre/slide-1.jpg'
+const autos = '/products/octubre/slide-2.jpg'
 const productplancha = '/products/octubre/product_1.jpg'
+const productAutos = '/products/octubre/product_2.jpg'
 
 const product1 = '/products/mayo/product_1.jpg'
 const product2 = '/products/mayo/product_2.jpg'
@@ -14,19 +16,68 @@ const product4 = '/products/product_4.jpg'
 const destacado1Movil = '/movil/mayo/slide-1.jpg'
 const destacado2Movil = '/movil/mayo/slide-2.jpg'
 const planchaMovil = '/movil/octubre/slide-1.jpg'
+const autosMovil = '/movil/octubre/slide-2.jpg'
 
 const screenWith = window.innerWidth
 let slide1 = destacado1
 let slide2 = destacado2
 let slide3 = plancha
+let slide4 = autos
 
 if (screenWith <= 480) {
   slide1 = destacado1Movil
   slide2 = destacado2Movil
   slide3 = planchaMovil
+  slide4 = autosMovil
 }
 
 const listProducts = [
+  {
+    id: '006',
+    src: productAutos,
+    title: 'Autos de carreras',
+    active: true,
+    special: false,
+    summary: 'Plancha de vapor portátil, vertical, eficiente y fácil de manejar. Incluye cepillo quita pelusas, removible.',
+    description: `
+      <h3>Características</h3>
+      <p>
+        •	Réplicas a escala reducida 1:43 <br/>
+        •	Alto nivel de detalle <br/>
+        •	Modelos originales <br/>
+        •	Fabricados en metal y plástico <br/>
+        •	10  modelos diferentes <br/>
+      </p>
+    `,
+    slide: slide4,
+    slug: 'autos',
+    subproducts: [
+      {
+        id: '0001',
+        title: 'Aspiradora para auto',
+        src: destacado1,
+        id_parent: '001'
+      },
+      {
+        id: '0002',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
+        src: destacado2,
+        id_parent: '001'
+      },
+      {
+        id: '0003',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.',
+        src: destacado3,
+        id_parent: '001'
+      },
+      {
+        id: '0004',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.',
+        src: destacado4,
+        id_parent: '001'
+      }
+    ]
+  },
   {
     id: '005',
     src: productplancha,
