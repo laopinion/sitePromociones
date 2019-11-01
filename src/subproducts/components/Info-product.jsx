@@ -106,7 +106,7 @@ const SlideProduct = (props) => {
           ) : slug === 'autos' ? (
             <div className='btns'>
               <div className='btn_payu'>
-                <p><span>$22.500</span> Sin domicilio</p>
+                <p><span>$22.500</span> Sin domicilio individual</p>
                 <form method='post' action='https://gateway.payulatam.com/ppp-web-gateway/pb.zul' accept-charset='UTF-8'>
                   <input type='image' border='0' alt='' src='https://promociones.laopinion.com.co/images/btn_pago.jpg' onClick='this.form.urlOrigen.value = window.location.href;' />
                   <input name='buttonId' type='hidden' value='8o7BYWhHUrFv98NdbiKuqSlLALsp8VxyybMg/GEuvyr6qakJVxFWNg==' />
@@ -124,7 +124,7 @@ const SlideProduct = (props) => {
                   <input name='buttonType' value='SIMPLE' type='hidden' />
                   <input name='signature' value='315d7a2dfdf0cfd5d4e55603e49d2bab5a8ee58d71038e604843e4fab4c57fdc' type='hidden' />
                 </form>
-                <p><span>$225.000</span> Sin domicilio coleccion</p>
+                <p><span>$225.000</span> Sin domicilio colección</p>
                 <form method='post' action='https://gateway.payulatam.com/ppp-web-gateway/pb.zul' accept-charset='UTF-8'>
                   <input type='image' border='0' alt='' src='https://promociones.laopinion.com.co/images/btn_pago.jpg' onClick='this.form.urlOrigen.value = window.location.href;' />
                   <input name='buttonId' type='hidden' value='49yOJDEa17vN+Jq6PpwcnUZARZaTn+PL+Npr/VpOWO+WefZz2ciCyA==' />
@@ -144,7 +144,7 @@ const SlideProduct = (props) => {
                 </form>
               </div>
               <div className='btn_payu'>
-                <p><span>$26.500</span> Con domicilio</p>
+                <p><span>$26.500</span> Con domicilio individual</p>
                 <form method='post' action='https://gateway.payulatam.com/ppp-web-gateway/pb.zul' accept-charset='UTF-8'>
                   <input type='image' border='0' alt='' src='https://promociones.laopinion.com.co/images/btn_pago.jpg' onClick='this.form.urlOrigen.value = window.location.href;' />
                   <input name='buttonId' type='hidden' value='HEp7379fry/LgHHcIRLhN9wIp1qJDOce2QR65i5iLOquk3qhJX4WUA==' />
@@ -163,7 +163,7 @@ const SlideProduct = (props) => {
                   <input name='buttonType' value='SIMPLE' type='hidden' />
                   <input name='signature' value='fac6efd8b619597b92d5065bc19394fdcddef06188908eec98d5ca7857bba4fd' type='hidden' />
                 </form>
-                <p><span>$229.000</span> Con domicilio coleccion</p>
+                <p><span>$229.000</span> Con domicilio colección</p>
                 <form method='post' action='https://gateway.payulatam.com/ppp-web-gateway/pb.zul' accept-charset='UTF-8'>
                   <input type='image' border='0' alt='' src='https://promociones.laopinion.com.co/images/btn_pago.jpg' onClick='this.form.urlOrigen.value = window.location.href;' />
                   <input name='buttonId' type='hidden' value='ar5Yd3AHLS8gQ/Qf7cKsZYqZ/Was3GXLSjABKsvwGIpTmlIL51B6NA==' />
