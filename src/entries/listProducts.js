@@ -5,8 +5,12 @@ const destacado4 = '/products/slideProduct_4.jpg'
 
 const plancha = '/products/octubre/slide-1.jpg'
 const autos = '/products/octubre/slide-2.jpg'
+const morral = '/products/febrero/slide.jpg'
+const espejo = '/products/febrero/slide2.jpg'
 const productplancha = '/products/octubre/product_1.jpg'
 const productAutos = '/products/octubre/product_2.jpg'
+const productMorral = '/products/febrero/product.jpg'
+const productEspejo = '/products/febrero/product2.jpg'
 
 const product1 = '/products/mayo/product_1.jpg'
 const product2 = '/products/mayo/product_2.jpg'
@@ -17,28 +21,136 @@ const destacado1Movil = '/movil/mayo/slide-1.jpg'
 const destacado2Movil = '/movil/mayo/slide-2.jpg'
 const planchaMovil = '/movil/octubre/slide-1.jpg'
 const autosMovil = '/movil/octubre/slide-2.jpg'
+const morralMovil = '/movil/febrero/slide.jpg'
+const espejoMovil = '/movil/febrero/slide2.jpg'
 
 const screenWith = window.innerWidth
 let slide1 = destacado1
 let slide2 = destacado2
 let slide3 = plancha
 let slide4 = autos
+let slide5 = morral
+let slide6 = espejo
 
 if (screenWith <= 480) {
   slide1 = destacado1Movil
   slide2 = destacado2Movil
   slide3 = planchaMovil
   slide4 = autosMovil
+  slide5 = morralMovil
+  slide6 = espejoMovil
 }
 
 const listProducts = [
   {
+    id: '008',
+    src: productEspejo,
+    title: 'Espejo de aumento con luz LED',
+    active: true,
+    special: false,
+    price: '45000',
+    priceDomicilio: '48000',
+    summary: null,
+    description: `
+      <h3>Características</h3>
+      <p>
+      -         20 cm de diámetro <br/>
+      -         Rotación 360° <br/>
+      -         Luces LED brillantes, color blanco <br/>
+      -         Aumento 5x <br/>
+      -         Requiere 3 baterías AAA no incluidas <br/>
+      </p>
+    `,
+    slide: slide6,
+    slug: 'espejo',
+    subproducts: [
+      {
+        id: '0001',
+        title: 'Espejo de aumento con luz LED',
+        src: destacado1,
+        id_parent: '001'
+      },
+      {
+        id: '0002',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
+        src: destacado2,
+        id_parent: '001'
+      },
+      {
+        id: '0003',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.',
+        src: destacado3,
+        id_parent: '001'
+      },
+      {
+        id: '0004',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.',
+        src: destacado4,
+        id_parent: '001'
+      }
+    ]
+  },
+  {
+    id: '007',
+    src: productMorral,
+    title: 'Morral Antirrobo',
+    active: true,
+    special: false,
+    price: '88000',
+    priceDomicilio: '91000',
+    summary: 'Con candado y protector para la lluvia',
+    description: `
+      <h3>Características</h3>
+      <p>
+        -         Medidas 26.5 * 42 cm <br/>
+        -         Material Poliéster 300D <br/>
+        -         Líneas reflectivas <br/>
+        -         Bolsillos para artículos personales <br/>
+        -         Cierre ocultos <br/>
+        -         Bolsillo para Tablet y Portátil <br/>
+        -         Protector para lluvia, se desprende para lavar. <br/>
+        -         Puente para tus dispositivos USB ( Powerbank y Audífonos) <br/>
+        -         Candado incorporado con clave <br/>
+      </p>
+    `,
+    slide: slide5,
+    slug: 'morral',
+    subproducts: [
+      {
+        id: '0001',
+        title: 'Morral Antirrobo',
+        src: destacado1,
+        id_parent: '001'
+      },
+      {
+        id: '0002',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
+        src: destacado2,
+        id_parent: '001'
+      },
+      {
+        id: '0003',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.',
+        src: destacado3,
+        id_parent: '001'
+      },
+      {
+        id: '0004',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.',
+        src: destacado4,
+        id_parent: '001'
+      }
+    ]
+  },
+  {
     id: '006',
     src: productAutos,
     title: 'Autos de carreras',
-    active: true,
+    active: false,
     special: false,
-    summary: 'Plancha de vapor portátil, vertical, eficiente y fácil de manejar. Incluye cepillo quita pelusas, removible.',
+    price: '22500',
+    priceDomicilio: '26500',
+    summary: 'Autos de carreras',
     description: `
       <h3>Características</h3>
       <p>
@@ -82,8 +194,10 @@ const listProducts = [
     id: '005',
     src: productplancha,
     title: 'Plancha a vapor portátil',
-    active: true,
+    active: false,
     special: true,
+    price: '85500',
+    priceDomicilio: '91500',
     summary: 'Plancha de vapor portátil, vertical, eficiente y fácil de manejar. Incluye cepillo quita pelusas, removible.',
     description: `
       <h3>Características</h3>
