@@ -2,24 +2,28 @@ import React, { Component } from 'react'
 
 import SlidesLayout from '../components/Slides-layout.jsx'
 
-const slideOne = '/products/mayo/slide-1.jpg'
-const slideTwo = '/products/mayo/slide-2.jpg'
-const plancha = '/products/octubre/slide-1.jpg'
-const autos = '/products/octubre/slide-2.jpg'
+// const slideOne = '/products/mayo/slide-1.jpg'
+// const slideTwo = '/products/mayo/slide-2.jpg'
+// const plancha = '/products/octubre/slide-1.jpg'
+// const autos = '/products/octubre/slide-2.jpg'
+const morral = '/products/febrero/slide.jpg'
+const espejo = '/products/febrero/slide2.jpg'
 
-const slideOneMovil = '/movil/mayo/slide-1.jpg'
-const slideTwoMovil = '/movil/mayo/slide-2.jpg'
-const planchaMovil = '/movil/octubre/slide-1.jpg'
-const autosMovil = '/movil/octubre/slide-2.jpg'
+// const slideOneMovil = '/movil/mayo/slide-1.jpg'
+// const slideTwoMovil = '/movil/mayo/slide-2.jpg'
+// const planchaMovil = '/movil/octubre/slide-1.jpg'
+// const autosMovil = '/movil/octubre/slide-2.jpg'
+const morralMovil = '/movil/febrero/slide.jpg'
+const espejoMovil = '/movil/febrero/slide2.jpg'
 
 const screenWith = window.innerWidth
 
-let slide1 = plancha
-let slide2 = autos
+let slide1 = morral
+let slide2 = espejo
 
 if (screenWith <= 480) {
-  slide1 = planchaMovil
-  slide2 = autosMovil
+  slide1 = morralMovil
+  slide2 = espejoMovil
 }
 
 // const slides = [
@@ -52,13 +56,13 @@ class Slides extends Component {
       slides: [
         {
           src: slide1,
-          title: 'Plancha',
-          slug: 'plancha'
+          title: 'Morral',
+          slug: 'morral'
         },
         {
           src: slide2,
-          title: 'Autos de carrera',
-          slug: 'autos'
+          title: 'Espejo',
+          slug: 'espejo'
         }
       ]
     }
@@ -139,9 +143,9 @@ class Slides extends Component {
     let screenWith = this.state.width || window.innerWidth
 
     if (screenWith <= 480) {
-      slide1 = planchaMovil
+      slide1 = morralMovil
     } else {
-      slide1 = plancha
+      slide1 = morral
     }
 
     this.setState({

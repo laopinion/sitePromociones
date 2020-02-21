@@ -6,6 +6,8 @@ import path from 'path'
 import bodyParser from 'body-parser'
 import request from 'superagent'
 import config from './config'
+const uuidv4 = require('uuid/v4')
+const crypto = require('crypto')
 // import ReactDOMServer from 'react-dom/server'
 
 const app = express()
@@ -118,6 +120,24 @@ app.post('/subscription-email', (req, res) => {
           }
         })
     })
+})
+
+app.post('/signature', (req, res) => {
+  const amount = req.body.amount
+  const apiKey = config.KEY_PAYU
+  const currency = 'COP'
+  const merchantId = '561677'
+  const referenceCode = `id_${uuidv4()}`
+
+  const signature = `${apiKey}~${merchantId}~${referenceCode}~${amount}~${currency}`
+  const signatureHash = crypto.createHash('md5').update(signature).digest('hex')
+  // console.log(signature)
+  // console.log(referenceCode)
+  // console.log(signatureHash)
+  res.status(200).json({
+    signatureHash,
+    referenceCode
+  })
 })
 
 // app.get('/prueba', (req, res) => {
