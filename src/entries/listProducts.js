@@ -106,9 +106,10 @@ const listProducts = [
         -         Material Poliéster 300D <br/>
         -         Líneas reflectivas <br/>
         -         Bolsillos para artículos personales <br/>
-        -         Cierre ocultos <br/>
+        -         Cierre oculto <br/>
         -         Bolsillo para Tablet y Portátil <br/>
-        -         Protector para lluvia, se desprende para lavar. <br/>
+        -         Protector para lluvia <br/>
+        -         se desprende para lavar <br/>
         -         Puente para tus dispositivos USB ( Powerbank y Audífonos) <br/>
         -         Candado incorporado con clave <br/>
       </p>

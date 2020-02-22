@@ -8,7 +8,7 @@ class SlideProduct extends Component {
     const { price } = this.props
 
     this.state = {
-      accountId: '806287',
+      accountId: '564188',
       merchantId: '561677',
       currency: 'COP',
       amount: price,
