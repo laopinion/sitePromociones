@@ -177,6 +177,21 @@ class SlideProduct extends Component {
             </div>
           )}
 
+          {active && (
+            <div className='prices'>
+              <ul>
+                <li>
+                  Con domicilio
+                  <span>${priceDomicilio}</span>
+                </li>
+                <li>
+                  Sin domicilio
+                  <span>${price}</span>
+                </li>
+              </ul>
+            </div>
+          )}
+
           {
             active ? (
               <div id='formulario'>
