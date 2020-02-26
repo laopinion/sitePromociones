@@ -5,11 +5,11 @@ const destacado4 = '/products/slideProduct_4.jpg'
 
 const plancha = '/products/octubre/slide-1.jpg'
 const autos = '/products/octubre/slide-2.jpg'
-const morral = '/products/febrero/slide.jpg'
+const morral = '/products/febrero/slide3.jpg'
 const espejo = '/products/febrero/slide2.jpg'
 const productplancha = '/products/octubre/product_1.jpg'
 const productAutos = '/products/octubre/product_2.jpg'
-const productMorral = '/products/febrero/product.jpg'
+const productMorral = '/products/febrero/product3.jpg'
 const productEspejo = '/products/febrero/product2.jpg'
 
 const product1 = '/products/mayo/product_1.jpg'
@@ -21,7 +21,7 @@ const destacado1Movil = '/movil/mayo/slide-1.jpg'
 const destacado2Movil = '/movil/mayo/slide-2.jpg'
 const planchaMovil = '/movil/octubre/slide-1.jpg'
 const autosMovil = '/movil/octubre/slide-2.jpg'
-const morralMovil = '/movil/febrero/slide.jpg'
+const morralMovil = '/movil/febrero/slide3.jpg'
 const espejoMovil = '/movil/febrero/slide2.jpg'
 
 const screenWith = window.innerWidth
