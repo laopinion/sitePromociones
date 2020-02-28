@@ -8,8 +8,8 @@ import SlidesLayout from '../components/Slides-layout.jsx'
 // const autos = '/products/octubre/slide-2.jpg'
 const morral = '/products/febrero/slide3.jpg'
 const espejo = '/products/febrero/slide2.jpg'
-const sarten = '/products/febrero/slide4.jpg'
-const ventilador = '/products/febrero/slide5.jpg'
+const sarten = '/products/febrero/slide6.jpg'
+const ventilador = '/products/febrero/slide7.jpg'
 
 // const slideOneMovil = '/movil/mayo/slide-1.jpg'
 // const slideTwoMovil = '/movil/mayo/slide-2.jpg'
@@ -17,8 +17,8 @@ const ventilador = '/products/febrero/slide5.jpg'
 // const autosMovil = '/movil/octubre/slide-2.jpg'
 const morralMovil = '/movil/febrero/slide3.jpg'
 const espejoMovil = '/movil/febrero/slide2.jpg'
-const sartenMovil = '/movil/febrero/slide4.jpg'
-const ventiladorMovil = '/movil/febrero/slide5.jpg'
+const sartenMovil = '/movil/febrero/slide6.jpg'
+const ventiladorMovil = '/movil/febrero/slide7.jpg'
 
 const screenWith = window.innerWidth
 
