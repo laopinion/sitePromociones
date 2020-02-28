@@ -79,7 +79,7 @@ class SlideProduct extends Component {
       }
     }).then(res => res.json())
       .then(response => {
-        console.log('Success:', response)
+        // console.log('Success:', response)
         this.setState({
           signature: response.signatureHash,
           referenceCode: response.referenceCode
@@ -182,11 +182,11 @@ class SlideProduct extends Component {
               <ul>
                 <li>
                   Con domicilio
-                  <span>${priceDomicilio}</span>
+                  <span>${new Intl.NumberFormat('COP').format(priceDomicilio)}</span>
                 </li>
                 <li>
                   Sin domicilio
-                  <span>${price}</span>
+                  <span>${new Intl.NumberFormat('COP').format(price)}</span>
                 </li>
               </ul>
             </div>
@@ -286,8 +286,8 @@ class SlideProduct extends Component {
                     <div className='form-item'>
                       <label htmlFor='Precio'>Precio</label>
                       <select value={value} onChange={this.handleChange}>
-                        <option value='normal'>Sin domicilio {price} </option>
-                        <option value='domicilio'>Con domicilio {priceDomicilio}</option>
+                        <option value='normal'>Sin domicilio {new Intl.NumberFormat('COP').format(price)} </option>
+                        <option value='domicilio'>Con domicilio {new Intl.NumberFormat('COP').format(priceDomicilio)}</option>
                       </select>
                     </div>
                     {value !== 'normal' && (
