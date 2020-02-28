@@ -8,6 +8,8 @@ import SlidesLayout from '../components/Slides-layout.jsx'
 // const autos = '/products/octubre/slide-2.jpg'
 const morral = '/products/febrero/slide3.jpg'
 const espejo = '/products/febrero/slide2.jpg'
+const sarten = '/products/febrero/slide4.jpg'
+const ventilador = '/products/febrero/slide5.jpg'
 
 // const slideOneMovil = '/movil/mayo/slide-1.jpg'
 // const slideTwoMovil = '/movil/mayo/slide-2.jpg'
@@ -15,15 +17,21 @@ const espejo = '/products/febrero/slide2.jpg'
 // const autosMovil = '/movil/octubre/slide-2.jpg'
 const morralMovil = '/movil/febrero/slide3.jpg'
 const espejoMovil = '/movil/febrero/slide2.jpg'
+const sartenMovil = '/movil/febrero/slide4.jpg'
+const ventiladorMovil = '/movil/febrero/slide5.jpg'
 
 const screenWith = window.innerWidth
 
 let slide1 = morral
 let slide2 = espejo
+let slide3 = sarten
+let slide4 = ventilador
 
 if (screenWith <= 480) {
   slide1 = morralMovil
   slide2 = espejoMovil
+  slide3 = sartenMovil
+  slide4 = ventiladorMovil
 }
 
 // const slides = [
@@ -63,6 +71,16 @@ class Slides extends Component {
           src: slide2,
           title: 'Espejo',
           slug: 'espejo'
+        },
+        {
+          src: slide3,
+          title: 'Sarten',
+          slug: 'sarten'
+        },
+        {
+          src: slide4,
+          title: 'Ventilador',
+          slug: 'ventilador'
         }
       ]
     }
@@ -136,25 +154,25 @@ class Slides extends Component {
   componentDidMount () {
     this.showSlides(this.slideIndex)
     this.carousel()
-    this.update()
+    // this.update()
   }
 
-  update = () => {
-    let screenWith = this.state.width || window.innerWidth
+  // update = () => {
+  //   let screenWith = this.state.width || window.innerWidth
 
-    if (screenWith <= 480) {
-      slide1 = morralMovil
-    } else {
-      slide1 = morral
-    }
+  //   if (screenWith <= 480) {
+  //     slide1 = morralMovil
+  //   } else {
+  //     slide1 = morral
+  //   }
 
-    this.setState({
-      height: window.innerHeight,
-      width: window.innerWidth,
-      // slides: [{ ...this.state.slides[0], src: slide1 }]
-      slides: [{ ...this.state.slides[0], src: slide1 }, { ...this.state.slides[1], src: slide2 }]
-    })
-  }
+  //   // this.setState({
+  //   //   height: window.innerHeight,
+  //   //   width: window.innerWidth,
+  //   //   // slides: [{ ...this.state.slides[0], src: slide1 }]
+  //   //   slides: [{ ...this.state.slides[0], src: slide1 }, { ...this.state.slides[1], src: slide2 }]
+  //   // })
+  // }
 
   render () {
     // console.log(this.state)

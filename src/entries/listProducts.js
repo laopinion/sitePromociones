@@ -7,10 +7,14 @@ const plancha = '/products/octubre/slide-1.jpg'
 const autos = '/products/octubre/slide-2.jpg'
 const morral = '/products/febrero/slide3.jpg'
 const espejo = '/products/febrero/slide2.jpg'
+const sarten = '/products/febrero/slide4.jpg'
+const ventilador = '/products/febrero/slide5.jpg'
 const productplancha = '/products/octubre/product_1.jpg'
 const productAutos = '/products/octubre/product_2.jpg'
 const productMorral = '/products/febrero/product3.jpg'
 const productEspejo = '/products/febrero/product2.jpg'
+const productSarten = '/products/febrero/product4.jpg'
+const productVentilador = '/products/febrero/product5.jpg'
 
 const product1 = '/products/mayo/product_1.jpg'
 const product2 = '/products/mayo/product_2.jpg'
@@ -23,6 +27,8 @@ const planchaMovil = '/movil/octubre/slide-1.jpg'
 const autosMovil = '/movil/octubre/slide-2.jpg'
 const morralMovil = '/movil/febrero/slide3.jpg'
 const espejoMovil = '/movil/febrero/slide2.jpg'
+const sartenMovil = '/movil/febrero/slide4.jpg'
+const ventiladorMovil = '/movil/febrero/slide5.jpg'
 
 const screenWith = window.innerWidth
 let slide1 = destacado1
@@ -31,6 +37,8 @@ let slide3 = plancha
 let slide4 = autos
 let slide5 = morral
 let slide6 = espejo
+let slide7 = sarten
+let slide8 = ventilador
 
 if (screenWith <= 480) {
   slide1 = destacado1Movil
@@ -39,9 +47,110 @@ if (screenWith <= 480) {
   slide4 = autosMovil
   slide5 = morralMovil
   slide6 = espejoMovil
+  slide7 = sartenMovil
+  slide8 = ventiladorMovil
 }
 
 const listProducts = [
+  {
+    id: '010',
+    src: productVentilador,
+    title: 'VENTILADOR PEDESTAL NEGRO 16 HECRSF-16BI ',
+    active: true,
+    special: false,
+    price: '70000',
+    priceDomicilio: '78000',
+    summary: null,
+    description: `
+      <h3>Características</h3>
+      <p>
+      ·        3 velocidades para un bajo consumo de energía <br/>
+      ·        Rejilla metálica para mayor resistencia <br/>
+      ·         Oscilación horizontal de 90º e inclinación vertical de 30º <br/>
+      ·        Motor eficiente <br/>
+      ·        Base estable antideslizante para mayor seguridad <br/>
+      ·        Altura ajustable hasta 130 cm <br/>
+      ·        Fácil de mover y transportar <br/>
+      ·        Ideal para espacios intermedios <br/>
+      ·        120V ~ 60Hz 45W <br/>
+      </p>
+    `,
+    slide: slide8,
+    slug: 'ventilador',
+    subproducts: [
+      {
+        id: '0001',
+        title: 'Espejo de aumento con luz LED',
+        src: destacado1,
+        id_parent: '001'
+      },
+      {
+        id: '0002',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
+        src: destacado2,
+        id_parent: '001'
+      },
+      {
+        id: '0003',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.',
+        src: destacado3,
+        id_parent: '001'
+      },
+      {
+        id: '0004',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.',
+        src: destacado4,
+        id_parent: '001'
+      }
+    ]
+  },
+  {
+    id: '009',
+    src: productSarten,
+    title: 'SET SARTENES FUSIONE 22 Y 24 CM',
+    active: true,
+    special: false,
+    price: '70000',
+    priceDomicilio: '73000',
+    summary: 'SIN TAPA 1,8MM TIERRA FUSIONE',
+    description: `
+      <h3>Características</h3>
+      <p>
+        ·        Materia prima de origen italiano <br/>
+        ·         6 capas de antiadherente <br/>
+        ·         Novedoso diseño con acabado tipo mármol <br/>
+        ·         Antiadherente exterior <br/>
+      </p>
+    `,
+    slide: slide7,
+    slug: 'sarten',
+    subproducts: [
+      {
+        id: '0001',
+        title: 'Espejo de aumento con luz LED',
+        src: destacado1,
+        id_parent: '001'
+      },
+      {
+        id: '0002',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
+        src: destacado2,
+        id_parent: '001'
+      },
+      {
+        id: '0003',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.',
+        src: destacado3,
+        id_parent: '001'
+      },
+      {
+        id: '0004',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.',
+        src: destacado4,
+        id_parent: '001'
+      }
+    ]
+  },
   {
     id: '008',
     src: productEspejo,
