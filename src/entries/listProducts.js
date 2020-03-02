@@ -56,7 +56,7 @@ const listProducts = [
     id: '010',
     src: productVentilador,
     title: 'VENTILADOR PEDESTAL NEGRO 16 HECRSF-16BI ',
-    active: true,
+    active: false,
     special: false,
     price: '70000',
     priceDomicilio: '78000',
