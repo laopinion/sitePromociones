@@ -15,6 +15,8 @@ const productMorral = '/products/febrero/product3.jpg'
 const productEspejo = '/products/febrero/product2.jpg'
 const productSarten = '/products/febrero/product6.jpg'
 const productVentilador = '/products/febrero/product7.jpg'
+const autos2 = '/products/julio/slide-1.jpg'
+const productAutos2 = '/products/julio/product_1.jpg'
 
 const product1 = '/products/mayo/product_1.jpg'
 const product2 = '/products/mayo/product_2.jpg'
@@ -29,6 +31,7 @@ const morralMovil = '/movil/febrero/slide3.jpg'
 const espejoMovil = '/movil/febrero/slide2.jpg'
 const sartenMovil = '/movil/febrero/slide6.jpg'
 const ventiladorMovil = '/movil/febrero/slide7.jpg'
+const autos2Movil = '/movil/julio/slide-1.jpg'
 
 const screenWith = window.innerWidth
 let slide1 = destacado1
@@ -39,6 +42,7 @@ let slide5 = morral
 let slide6 = espejo
 let slide7 = sarten
 let slide8 = ventilador
+let slide9 = autos2
 
 if (screenWith <= 480) {
   slide1 = destacado1Movil
@@ -49,9 +53,56 @@ if (screenWith <= 480) {
   slide6 = espejoMovil
   slide7 = sartenMovil
   slide8 = ventiladorMovil
+  slide9 = autos2Movil
 }
 
 const listProducts = [
+  {
+    id: '011',
+    src: productAutos2,
+    title: 'Autos Clásicos',
+    active: false,
+    special: false,
+    price: '70000',
+    priceDomicilio: '78000',
+    summary: null,
+    description: `
+      <h3>Características</h3>
+      <p>
+      ·        9 modelos diferentes <br/>
+      ·        Fabricados en metal y plástico <br/>
+      ·        Replicas a escala reducida <br/>
+      </p>
+    `,
+    slide: slide9,
+    slug: 'autos-clasicos',
+    subproducts: [
+      {
+        id: '0001',
+        title: 'Espejo de aumento con luz LED',
+        src: destacado1,
+        id_parent: '001'
+      },
+      {
+        id: '0002',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.',
+        src: destacado2,
+        id_parent: '001'
+      },
+      {
+        id: '0003',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.',
+        src: destacado3,
+        id_parent: '001'
+      },
+      {
+        id: '0004',
+        title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.',
+        src: destacado4,
+        id_parent: '001'
+      }
+    ]
+  },
   {
     id: '010',
     src: productVentilador,
@@ -108,7 +159,7 @@ const listProducts = [
     id: '009',
     src: productSarten,
     title: 'SET SARTENES FUSIONE 22 Y 24 CM',
-    active: true,
+    active: false,
     special: false,
     price: '70000',
     priceDomicilio: '73000',
@@ -155,7 +206,7 @@ const listProducts = [
     id: '008',
     src: productEspejo,
     title: 'Espejo de aumento con luz LED',
-    active: true,
+    active: false,
     special: false,
     price: '45000',
     priceDomicilio: '48000',
@@ -203,7 +254,7 @@ const listProducts = [
     id: '007',
     src: productMorral,
     title: 'Morral Antirrobo',
-    active: true,
+    active: false,
     special: false,
     price: '88000',
     priceDomicilio: '91000',
