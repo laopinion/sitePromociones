@@ -6,29 +6,31 @@ import SlidesLayout from '../components/Slides-layout.jsx'
 // const slideTwo = '/products/mayo/slide-2.jpg'
 // const plancha = '/products/octubre/slide-1.jpg'
 // const autos = '/products/octubre/slide-2.jpg'
-const morral = '/products/febrero/slide3.jpg'
+// const morral = '/products/febrero/slide3.jpg'
 const espejo = '/products/febrero/slide2.jpg'
 const sarten = '/products/febrero/slide6.jpg'
 const ventilador = '/products/febrero/slide7.jpg'
+const autos = '/products/julio/slide-1.jpg'
 
 // const slideOneMovil = '/movil/mayo/slide-1.jpg'
 // const slideTwoMovil = '/movil/mayo/slide-2.jpg'
 // const planchaMovil = '/movil/octubre/slide-1.jpg'
 // const autosMovil = '/movil/octubre/slide-2.jpg'
-const morralMovil = '/movil/febrero/slide3.jpg'
+// const morralMovil = '/movil/febrero/slide3.jpg'
 const espejoMovil = '/movil/febrero/slide2.jpg'
 const sartenMovil = '/movil/febrero/slide6.jpg'
 const ventiladorMovil = '/movil/febrero/slide7.jpg'
+const autosMovil = '/movil/julio/slide-1.jpg'
 
 const screenWith = window.innerWidth
 
-let slide1 = morral
+let slide1 = autos
 let slide2 = espejo
 let slide3 = sarten
 let slide4 = ventilador
 
 if (screenWith <= 480) {
-  slide1 = morralMovil
+  slide1 = autosMovil
   slide2 = espejoMovil
   slide3 = sartenMovil
   slide4 = ventiladorMovil
@@ -64,8 +66,8 @@ class Slides extends Component {
       slides: [
         {
           src: slide1,
-          title: 'Morral',
-          slug: 'morral'
+          title: 'Autos Clásicos',
+          slug: 'autos-clasicos'
         },
         {
           src: slide2,

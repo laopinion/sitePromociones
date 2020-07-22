@@ -61,7 +61,7 @@ const listProducts = [
     id: '011',
     src: productAutos2,
     title: 'Autos Clásicos',
-    active: false,
+    active: true,
     special: false,
     price: '70000',
     priceDomicilio: '78000',

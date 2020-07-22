@@ -5,14 +5,17 @@ WORKDIR /app
 
 COPY package*.json ./
 
-ENV NODE_ENV production
+ENV NODE_ENV development
+# ENV NODE_ENV production
 ENV PORT 3000
 
 RUN npm install
 
 COPY . /app
 
-RUN npm install -g webpack@4.15.0 && npm install -g webpack-cli@3.0.8 && npm install -g babel-cli@6.26.0 && npm install -g babel-preset-es2015@6.24.1 && npm install babel-preset-react@6.24.1 && npm install babel-preset-stage-2@6.24.1
+# RUN npm install -g webpack@4.15.0 && npm install -g webpack-cli@3.0.8 && npm install -g babel-cli@6.26.0 && npm install -g babel-loader@7.1.2 && npm install -g babel-preset-es2015@6.24.1 && npm install babel-preset-react@6.24.1 && npm install babel-preset-stage-2@6.24.1
+
+# RUN npm install -g webpack-merge@4.1.3 
 
 RUN npm run webpack-prod
 
