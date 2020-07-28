@@ -63,8 +63,11 @@ const listProducts = [
     title: 'Autos Clásicos',
     active: true,
     special: false,
-    price: '70000',
-    priceDomicilio: '78000',
+    price: '24500',
+    priceDomicilio: '27500',
+    collection: true,
+    priceCollection: '220500',
+    priceCollectionDomicilio: '223500',
     summary: null,
     description: `
       <h3>Características</h3>
@@ -159,7 +162,7 @@ const listProducts = [
     id: '009',
     src: productSarten,
     title: 'SET SARTENES FUSIONE 22 Y 24 CM',
-    active: false,
+    active: true,
     special: false,
     price: '70000',
     priceDomicilio: '73000',

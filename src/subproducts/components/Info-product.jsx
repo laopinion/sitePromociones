@@ -102,7 +102,20 @@ class SlideProduct extends Component {
   }
 
   render () {
-    const { slide, title, description, summary, active, special, slug, price, priceDomicilio } = this.props
+    const {
+      slide,
+      title,
+      description,
+      summary,
+      active,
+      special,
+      collection,
+      slug,
+      price,
+      priceDomicilio,
+      priceCollection,
+      priceCollectionDomicilio
+    } = this.props;
     // console.log(active)
     const {
       accountId,
@@ -188,6 +201,20 @@ class SlideProduct extends Component {
                   Sin domicilio
                   <span>${new Intl.NumberFormat('COP').format(price)}</span>
                 </li>
+                {
+                  collection && (
+                    <Fragment>
+                      <li>
+                        Colección con domicilio
+                        <span>${new Intl.NumberFormat('COP').format(priceCollectionDomicilio)}</span>
+                      </li>
+                      <li>
+                        Colección sin domicilio
+                        <span>${new Intl.NumberFormat('COP').format(priceCollection)}</span>
+                      </li>
+                    </Fragment>
+                  )
+                }
               </ul>
             </div>
           )}
@@ -288,6 +315,12 @@ class SlideProduct extends Component {
                       <select value={value} onChange={this.handleChange}>
                         <option value='normal'>Sin domicilio {new Intl.NumberFormat('COP').format(price)} </option>
                         <option value='domicilio'>Con domicilio {new Intl.NumberFormat('COP').format(priceDomicilio)}</option>
+                        { collection && (
+                          <Fragment>
+                            <option value='normal'>Colección sin domicilio {new Intl.NumberFormat('COP').format(priceCollection)} </option>
+                            <option value='domicilio'>Colección con domicilio {new Intl.NumberFormat('COP').format(priceCollectionDomicilio)}</option>
+                          </Fragment>
+                        )}
                       </select>
                     </div>
                     {value !== 'normal' && (
