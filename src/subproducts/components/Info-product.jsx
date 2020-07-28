@@ -217,11 +217,11 @@ class SlideProduct extends Component {
                   collection && (
                     <Fragment>
                       <li>
-                        Colección con domicilio
+                        Colección
                         <span>${new Intl.NumberFormat('COP').format(priceCollectionDomicilio)}</span>
                       </li>
                       <li>
-                        Colección sin domicilio
+                        Colección
                         <span>${new Intl.NumberFormat('COP').format(priceCollection)}</span>
                       </li>
                     </Fragment>
@@ -335,7 +335,7 @@ class SlideProduct extends Component {
                         )}
                       </select>
                     </div>
-                    {value !== 'normal' && (
+                    {value !== 'normal' || value !== 'normalColection' && (
                       <Fragment>
                         <div className='form-item'>
                           <label htmlFor='Ciudad'>Ciudad</label>
