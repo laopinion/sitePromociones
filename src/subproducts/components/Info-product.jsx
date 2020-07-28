@@ -35,19 +35,31 @@ class SlideProduct extends Component {
 
   handleChange = (event) => {
     // console.log(event.target.value)
-    const { price, priceDomicilio } = this.props
+    const { price, priceDomicilio, priceCollection, priceCollectionDomicilio } = this.props
+    let value = event.target.value
 
-    if (event.target.value === 'normal') {
+    if (value === 'normal') {
       this.setState({
         amount: price,
         shippingAddress: 'No aplica domicilio'
       })
       this.signature(price)
-    } else {
+    } else if(value === 'domicilio') {
       this.setState({
         amount: priceDomicilio
       })
       this.signature(priceDomicilio)
+    } else if (value === 'normalColection') {
+      this.setState({
+        amount: priceCollection,
+        shippingAddress: 'No aplica domicilio'
+      })
+      this.signature(priceCollection)
+    } else {
+      this.setState({
+        amount: priceCollectionDomicilio
+      })
+      this.signature(priceCollectionDomicilio)
     }
 
     this.setState({value: event.target.value})
@@ -317,8 +329,8 @@ class SlideProduct extends Component {
                         <option value='domicilio'>Con domicilio {new Intl.NumberFormat('COP').format(priceDomicilio)}</option>
                         { collection && (
                           <Fragment>
-                            <option value='normal'>Colección sin domicilio {new Intl.NumberFormat('COP').format(priceCollection)} </option>
-                            <option value='domicilio'>Colección con domicilio {new Intl.NumberFormat('COP').format(priceCollectionDomicilio)}</option>
+                            <option value='normalColection'>Colección sin domicilio {new Intl.NumberFormat('COP').format(priceCollection)} </option>
+                            <option value='domicilioColection'>Colección con domicilio {new Intl.NumberFormat('COP').format(priceCollectionDomicilio)}</option>
                           </Fragment>
                         )}
                       </select>
