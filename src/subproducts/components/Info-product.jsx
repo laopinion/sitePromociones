@@ -335,7 +335,7 @@ class SlideProduct extends Component {
                         )}
                       </select>
                     </div>
-                    {value === 'domicilio' || value === 'domicilioColection' && (
+                    {(value === 'domicilio' || value === 'domicilioColection') && (
                       <Fragment>
                         <div className='form-item'>
                           <label htmlFor='Ciudad'>Ciudad</label>
