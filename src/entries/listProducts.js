@@ -24,13 +24,19 @@ const pcepillo2 = "/products/2020/octubre/cepillo_2.jpeg"
 const pcepillo42 = "/products/2020/octubre/cepillo4_2.jpeg"
 const pmop2 = "/products/2020/octubre/mop_2.jpeg"
 const psprayer2 = "/products/2020/octubre/sprayer_2.jpeg"
+const pcamas = "/products/2020/octubre/cama-slide.jpg"
+const pcomedors = "/products/2020/octubre/comedor-slide.jpg"
+const pdosificadors = "/products/2020/octubre/dosificador-slide.jpg"
 
 // Format 460x270
 const pbarra1 = "/products/2020/octubre/barra_1.jpeg"
-const pcepillo1 = "/products/2020/octubre/cepillo_1.jpeg"
+const pcepillo1 = "/products/2020/octubre/cepillo_1_.jpeg"
 const pcepillo41 = "/products/2020/octubre/cepillo4_1.jpeg"
 const pmop1 = "/products/2020/octubre/mop_1.jpeg"
 const psprayer1 = "/products/2020/octubre/sprayer_1.jpeg"
+const pcama = "/products/2020/octubre/cama.jpg"
+const pcomedor = "/products/2020/octubre/comedor.jpg"
+const pdosificador = "/products/2020/octubre/dosificador.jpg"
 
 // Slides mobile
 const pbarraM = "/movil/2020/octubre/barra_3.jpeg"
@@ -38,6 +44,9 @@ const pcepilloM = "/movil/2020/octubre/cepillo_3.jpeg"
 const pcepillo4M = "/movil/2020/octubre/cepillo4_3.jpeg"
 const pmopM = "/movil/2020/octubre/mop_3.jpeg"
 const psprayerM = "/movil/2020/octubre/sprayer_3.jpeg"
+const pcamaM = "/movil/2020/octubre/cama-m.jpg"
+const pcomedorM = "/movil/2020/octubre/comedor-m.jpg"
+const pdosificadorM = "/movil/2020/octubre/dosificador-m.jpg"
 
 const product1 = "/products/mayo/product_1.jpg"
 const product2 = "/products/mayo/product_2.jpg"
@@ -69,6 +78,9 @@ let slide11 = pcepillo2
 let slide12 = pcepillo42
 let slide13 = pmop2
 let slide14 = psprayer2
+let slide15 = pcamas
+let slide16 = pcomedors
+let slide17 = pdosificadors
 
 if (screenWith <= 480) {
   slide1 = destacado1Movil
@@ -84,9 +96,153 @@ if (screenWith <= 480) {
   slide12 = pcepillo4M
   slide13 = pmopM
   slide14 = psprayerM
+  slide15 = pcamaM
+  slide16 = pcomedorM
+  slide17 = pdosificadorM
 }
 
 const listProducts = [
+  {
+    id: "019",
+    src: pdosificador,
+    title: "DOSIFICADOR DOBLE USO",
+    active: true,
+    special: false,
+    price: "49000",
+    priceDomicilio: "52000",
+    collection: false,
+    priceCollection: "220500",
+    priceCollectionDomicilio: "223500",
+    summary: null,
+    description: `
+      <h3>Características</h3>
+      <p>
+        Largo 34,5 cm X Ancho 25,5 X Alto 25,5 cm / 668 Gr <br/>
+      </p>
+    `,
+    slide: slide17,
+    slug: "dosificador-doble",
+    subproducts: [
+      {
+        id: "0001",
+        title: "Espejo de aumento con luz LED",
+        src: destacado1,
+        id_parent: "001",
+      },
+      {
+        id: "0002",
+        title: "Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.",
+        src: destacado2,
+        id_parent: "001",
+      },
+      {
+        id: "0003",
+        title: "Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.",
+        src: destacado3,
+        id_parent: "001",
+      },
+      {
+        id: "0004",
+        title: "Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.",
+        src: destacado4,
+        id_parent: "001",
+      },
+    ],
+  },
+  {
+    id: "018",
+    src: pcomedor,
+    title: "COMEDERO DOBLE BI-COLOR ANTIDESLIZANTE",
+    active: true,
+    special: false,
+    price: "19000",
+    priceDomicilio: "22000",
+    collection: false,
+    priceCollection: "220500",
+    priceCollectionDomicilio: "223500",
+    summary: null,
+    description: `
+      <h3>Características</h3>
+      <p>
+        Largo 31,5 cm X Ancho 18 X Alto 7,5 cm / 248 Gr <br/>
+      </p>
+    `,
+    slide: slide16,
+    slug: "comedor-doble",
+    subproducts: [
+      {
+        id: "0001",
+        title: "Espejo de aumento con luz LED",
+        src: destacado1,
+        id_parent: "001",
+      },
+      {
+        id: "0002",
+        title: "Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.",
+        src: destacado2,
+        id_parent: "001",
+      },
+      {
+        id: "0003",
+        title: "Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.",
+        src: destacado3,
+        id_parent: "001",
+      },
+      {
+        id: "0004",
+        title: "Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.",
+        src: destacado4,
+        id_parent: "001",
+      },
+    ],
+  },
+  {
+    id: "017",
+    src: pcama,
+    title: "CAMA PLASTICA",
+    active: true,
+    special: false,
+    price: "35000",
+    priceDomicilio: "38000",
+    collection: false,
+    priceCollection: "220500",
+    priceCollectionDomicilio: "223500",
+    summary: null,
+    description: `
+      <h3>Características</h3>
+      <p>
+        Largo 35,5 cm X Ancho 48 X Alto 13,3 cm / 690 Gr <br/>
+      </p>
+    `,
+    slide: slide15,
+    slug: "cama-plastica",
+    subproducts: [
+      {
+        id: "0001",
+        title: "Espejo de aumento con luz LED",
+        src: destacado1,
+        id_parent: "001",
+      },
+      {
+        id: "0002",
+        title: "Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-002.",
+        src: destacado2,
+        id_parent: "001",
+      },
+      {
+        id: "0003",
+        title: "Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-003.",
+        src: destacado3,
+        id_parent: "001",
+      },
+      {
+        id: "0004",
+        title: "Lorem ipsum dolor, sit amet consectetur adipisicing elit sub-product-004.",
+        src: destacado4,
+        id_parent: "001",
+      },
+    ],
+  },
   {
     id: "016",
     src: psprayer1,
@@ -95,7 +251,7 @@ const listProducts = [
     special: false,
     price: "269000",
     priceDomicilio: "272000",
-    collection: true,
+    collection: false,
     priceCollection: "220500",
     priceCollectionDomicilio: "223500",
     summary: null,
@@ -145,7 +301,7 @@ const listProducts = [
     special: false,
     price: "226000",
     priceDomicilio: "229000",
-    collection: true,
+    collection: false,
     priceCollection: "220500",
     priceCollectionDomicilio: "223500",
     summary: null,
@@ -193,7 +349,7 @@ const listProducts = [
     special: false,
     price: "41000",
     priceDomicilio: "44000",
-    collection: true,
+    collection: false,
     priceCollection: "220500",
     priceCollectionDomicilio: "223500",
     summary: null,
@@ -241,7 +397,7 @@ const listProducts = [
     special: false,
     price: "105000",
     priceDomicilio: "108000",
-    collection: true,
+    collection: false,
     priceCollection: "220500",
     priceCollectionDomicilio: "223500",
     summary: null,
@@ -290,7 +446,7 @@ const listProducts = [
     special: false,
     price: "176000",
     priceDomicilio: "179000",
-    collection: true,
+    collection: false,
     priceCollection: "220500",
     priceCollectionDomicilio: "223500",
     summary: null,

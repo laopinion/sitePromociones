@@ -18,6 +18,9 @@ const pcepillo2 = "/products/2020/octubre/cepillo_2.jpeg"
 const pcepillo42 = "/products/2020/octubre/cepillo4_2.jpeg"
 const pmop2 = "/products/2020/octubre/mop_2.jpeg"
 const psprayer2 = "/products/2020/octubre/sprayer_2.jpeg"
+const pcama = "/products/2020/octubre/cama-slide.jpg"
+const pcomedor = "/products/2020/octubre/comedor-slide.jpg"
+const pdosificador = "/products/2020/octubre/dosificador-slide.jpg"
 
 // const slideOneMovil = '/movil/mayo/slide-1.jpg'
 // const slideTwoMovil = '/movil/mayo/slide-2.jpg'
@@ -35,6 +38,9 @@ const pcepilloM = "/movil/2020/octubre/cepillo_3.jpeg"
 const pcepillo4M = "/movil/2020/octubre/cepillo4_3.jpeg"
 const pmopM = "/movil/2020/octubre/mop_3.jpeg"
 const psprayerM = "/movil/2020/octubre/sprayer_3.jpeg"
+const pcamaM = "/movil/2020/octubre/cama-m.jpg"
+const pcomedorM = "/movil/2020/octubre/comedor-m.jpg"
+const pdosificadorM = "/movil/2020/octubre/dosificador-m.jpg"
 
 const screenWith = window.innerWidth
 
@@ -43,6 +49,9 @@ let slide2 = pcepillo2
 let slide3 = pcepillo42
 let slide4 = pmop2
 let slide5 = psprayer2
+let slide6 = pcama
+let slide7 = pcomedor
+let slide8 = pdosificador
 
 if (screenWith <= 480) {
   slide1 = pbarraM
@@ -50,6 +59,9 @@ if (screenWith <= 480) {
   slide3 = pcepillo4M
   slide4 = pmopM
   slide5 = psprayerM
+  slide6 = pcamaM
+  slide7 = pcomedorM
+  slide8 = pdosificadorM
 }
 
 // const slides = [
@@ -104,6 +116,21 @@ class Slides extends Component {
           src: slide5,
           title: "SPRAYER IONIZADOR",
           slug: "sprayer",
+        },
+        {
+          src: slide6,
+          title: "CAMA PLASTICA",
+          slug: "cama-plastica",
+        },
+        {
+          src: slide7,
+          title: "COMEDERO DOBLE BI-COLOR ANTIDESLIZANTE",
+          slug: "comedor-doble",
+        },
+        {
+          src: slide8,
+          title: "DOSIFICADOR DOBLE USO",
+          slug: "dosificador-doble",
         },
       ],
     }
