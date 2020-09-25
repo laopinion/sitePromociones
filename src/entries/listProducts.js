@@ -90,11 +90,11 @@ const listProducts = [
   {
     id: "016",
     src: psprayer1,
-    title: "Sprayer 1",
+    title: "SPRAYER IONIZADOR",
     active: true,
     special: false,
-    price: "24500",
-    priceDomicilio: "27500",
+    price: "269000",
+    priceDomicilio: "272000",
     collection: true,
     priceCollection: "220500",
     priceCollectionDomicilio: "223500",
@@ -102,13 +102,14 @@ const listProducts = [
     description: `
       <h3>Características</h3>
       <p>
-      ·        9 modelos diferentes <br/>
-      ·        Fabricados en metal y plástico <br/>
-      ·        Replicas a escala reducida <br/>
+        Mezcla de sal, agua y 10 minutos de electrólisis hacen un desinfectante casero para cualquier superficie. <br/>
+        capacidad 350 ml. <br/>
+        Accesorios: Cable USB, manual de instrucciones, medidor y cuchara. <br/>
+        Proporciona una alternativa de limpieza sin sustancias químicas. <br/>
       </p>
     `,
     slide: slide14,
-    slug: "sprayer-1",
+    slug: "sprayer",
     subproducts: [
       {
         id: "0001",
@@ -139,11 +140,11 @@ const listProducts = [
   {
     id: "015",
     src: pmop1,
-    title: "Mop 1",
+    title: "MOP A VAPOR - MULTIUSOS",
     active: true,
     special: false,
-    price: "24500",
-    priceDomicilio: "27500",
+    price: "226000",
+    priceDomicilio: "229000",
     collection: true,
     priceCollection: "220500",
     priceCollectionDomicilio: "223500",
@@ -151,13 +152,12 @@ const listProducts = [
     description: `
       <h3>Características</h3>
       <p>
-      ·        9 modelos diferentes <br/>
-      ·        Fabricados en metal y plástico <br/>
-      ·        Replicas a escala reducida <br/>
+        Limpiador a vapor multiusos con luz ultravioleta para eliminar gérmenes y bacterias. <br/>
+        Con paño para ropa, limpiador de vidrio y diferentes boquillas y cepillos para todos los usos. <br/>
       </p>
     `,
     slide: slide13,
-    slug: "mop-1",
+    slug: "mop-vapor",
     subproducts: [
       {
         id: "0001",
@@ -188,11 +188,11 @@ const listProducts = [
   {
     id: "014",
     src: pcepillo41,
-    title: "Cepillo 2",
+    title: "CEPILLO 4 CABEZOTES",
     active: true,
     special: false,
-    price: "24500",
-    priceDomicilio: "27500",
+    price: "41000",
+    priceDomicilio: "44000",
     collection: true,
     priceCollection: "220500",
     priceCollectionDomicilio: "223500",
@@ -200,13 +200,12 @@ const listProducts = [
     description: `
       <h3>Características</h3>
       <p>
-      ·        9 modelos diferentes <br/>
-      ·        Fabricados en metal y plástico <br/>
-      ·        Replicas a escala reducida <br/>
+        Soporte con 4 cepillos diferentes que te permitirán obtener un mejor alcance en cada superficie. <br/>
+        Funciona con baterías. <br/>
       </p>
     `,
     slide: slide12,
-    slug: "cepillo-2",
+    slug: "cepillo-cabezotes",
     subproducts: [
       {
         id: "0001",
@@ -237,11 +236,11 @@ const listProducts = [
   {
     id: "013",
     src: pcepillo1,
-    title: "Cepillo 1",
+    title: "CEPILLO SECADOR DE MASCOTAS",
     active: true,
     special: false,
-    price: "24500",
-    priceDomicilio: "27500",
+    price: "105000",
+    priceDomicilio: "108000",
     collection: true,
     priceCollection: "220500",
     priceCollectionDomicilio: "223500",
@@ -249,13 +248,13 @@ const listProducts = [
     description: `
       <h3>Características</h3>
       <p>
-      ·        9 modelos diferentes <br/>
-      ·        Fabricados en metal y plástico <br/>
-      ·        Replicas a escala reducida <br/>
+        Con dos niveles de 45 grados y 65 grados. <br/>
+        Permite ahorrar tiempo al peinar y secar a tu mascota al mismo tiempo. <br/>
+        Con cerdas de acero. <br/>
       </p>
     `,
     slide: slide11,
-    slug: "cepillo-1",
+    slug: "cepillo-secador-mascotas",
     subproducts: [
       {
         id: "0001",
@@ -286,11 +285,11 @@ const listProducts = [
   {
     id: "012",
     src: pbarra1,
-    title: "Barra 1",
+    title: "BARRA ESTERILIZADORA",
     active: true,
     special: false,
-    price: "24500",
-    priceDomicilio: "27500",
+    price: "176000",
+    priceDomicilio: "179000",
     collection: true,
     priceCollection: "220500",
     priceCollectionDomicilio: "223500",
@@ -298,13 +297,14 @@ const listProducts = [
     description: `
       <h3>Características</h3>
       <p>
-      ·        9 modelos diferentes <br/>
-      ·        Fabricados en metal y plástico <br/>
-      ·        Replicas a escala reducida <br/>
+        Mata hasta el 99% de los gérmenes. <br/>
+        Amigable con la salud y el medio ambiente. <br/>
+        Pasa por el área deseada por unos minutos y quedará desinfectado. <br/>
+        Se puede utilizar sobre cualquier accesorio (teléfono, utensilios de cocina, lugares de trabajo y en el hogar). <br/>
       </p>
     `,
     slide: slide10,
-    slug: "barra-1",
+    slug: "barra-esterilizadora",
     subproducts: [
       {
         id: "0001",
@@ -336,7 +336,7 @@ const listProducts = [
     id: "011",
     src: productAutos2,
     title: "Autos Clásicos",
-    active: true,
+    active: false,
     special: false,
     price: "24500",
     priceDomicilio: "27500",
@@ -437,7 +437,7 @@ const listProducts = [
     id: "009",
     src: productSarten,
     title: "SET SARTENES FUSIONE 22 Y 24 CM",
-    active: true,
+    active: false,
     special: false,
     price: "70000",
     priceDomicilio: "73000",

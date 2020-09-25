@@ -82,28 +82,28 @@ class Slides extends Component {
       slides: [
         {
           src: slide1,
-          title: "Barra 1",
-          slug: "barra-1",
+          title: "BARRA ESTERILIZADORA",
+          slug: "barra-esterilizadora",
         },
         {
           src: slide2,
-          title: "Cepillo 1",
-          slug: "cepillo-1",
+          title: "CEPILLO SECADOR DE MASCOTAS",
+          slug: "cepillo-secador-mascotas",
         },
         {
           src: slide3,
-          title: "Cepillo 2",
-          slug: "cepillo-2",
+          title: "CEPILLO 4 CABEZOTES",
+          slug: "cepillo-cabezotes",
         },
         {
           src: slide4,
-          title: "Mop 1",
-          slug: "mop-1",
+          title: "MOP A VAPOR - MULTIUSOS",
+          slug: "mop-vapor",
         },
         {
           src: slide5,
-          title: "Sprayer 1",
-          slug: "sprayer-1",
+          title: "SPRAYER IONIZADOR",
+          slug: "sprayer",
         },
       ],
     }
