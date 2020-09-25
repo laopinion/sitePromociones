@@ -20,7 +20,7 @@ const productAutos2 = "/products/julio/product_1.jpg"
 
 // Slides
 const pbarra2 = "/products/2020/octubre/barra_2.jpeg"
-const pcepillo2 = "/products/2020/octubre/cepillo_2.jpeg"
+const pcepillo2 = "/products/2020/octubre/cepillo_2.jpg"
 const pcepillo42 = "/products/2020/octubre/cepillo4_2.jpeg"
 const pmop2 = "/products/2020/octubre/mop_2.jpeg"
 const psprayer2 = "/products/2020/octubre/sprayer_2.jpeg"
@@ -40,7 +40,7 @@ const pdosificador = "/products/2020/octubre/dosificador.jpg"
 
 // Slides mobile
 const pbarraM = "/movil/2020/octubre/barra_3.jpeg"
-const pcepilloM = "/movil/2020/octubre/cepillo_3.jpeg"
+const pcepilloM = "/movil/2020/octubre/cepillo_3.jpg"
 const pcepillo4M = "/movil/2020/octubre/cepillo4_3.jpeg"
 const pmopM = "/movil/2020/octubre/mop_3.jpeg"
 const psprayerM = "/movil/2020/octubre/sprayer_3.jpeg"
