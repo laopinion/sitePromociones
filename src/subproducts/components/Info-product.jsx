@@ -35,19 +35,31 @@ class SlideProduct extends Component {
 
   handleChange = (event) => {
     // console.log(event.target.value)
-    const { price, priceDomicilio } = this.props
+    const { price, priceDomicilio, priceCollection, priceCollectionDomicilio } = this.props
+    let value = event.target.value
 
-    if (event.target.value === 'normal') {
+    if (value === 'normal') {
       this.setState({
         amount: price,
         shippingAddress: 'No aplica domicilio'
       })
       this.signature(price)
-    } else {
+    } else if(value === 'domicilio') {
       this.setState({
         amount: priceDomicilio
       })
       this.signature(priceDomicilio)
+    } else if (value === 'normalColection') {
+      this.setState({
+        amount: priceCollection,
+        shippingAddress: 'No aplica domicilio'
+      })
+      this.signature(priceCollection)
+    } else {
+      this.setState({
+        amount: priceCollectionDomicilio
+      })
+      this.signature(priceCollectionDomicilio)
     }
 
     this.setState({value: event.target.value})
@@ -102,7 +114,20 @@ class SlideProduct extends Component {
   }
 
   render () {
-    const { slide, title, description, summary, active, special, slug, price, priceDomicilio } = this.props
+    const {
+      slide,
+      title,
+      description,
+      summary,
+      active,
+      special,
+      collection,
+      slug,
+      price,
+      priceDomicilio,
+      priceCollection,
+      priceCollectionDomicilio
+    } = this.props;
     // console.log(active)
     const {
       accountId,
@@ -188,6 +213,20 @@ class SlideProduct extends Component {
                   Sin domicilio
                   <span>${new Intl.NumberFormat('COP').format(price)}</span>
                 </li>
+                {
+                  collection && (
+                    <Fragment>
+                      <li>
+                        Colección
+                        <span>${new Intl.NumberFormat('COP').format(priceCollectionDomicilio)}</span>
+                      </li>
+                      <li>
+                        Colección
+                        <span>${new Intl.NumberFormat('COP').format(priceCollection)}</span>
+                      </li>
+                    </Fragment>
+                  )
+                }
               </ul>
             </div>
           )}
@@ -288,9 +327,15 @@ class SlideProduct extends Component {
                       <select value={value} onChange={this.handleChange}>
                         <option value='normal'>Sin domicilio {new Intl.NumberFormat('COP').format(price)} </option>
                         <option value='domicilio'>Con domicilio {new Intl.NumberFormat('COP').format(priceDomicilio)}</option>
+                        { collection && (
+                          <Fragment>
+                            <option value='normalColection'>Colección sin domicilio {new Intl.NumberFormat('COP').format(priceCollection)} </option>
+                            <option value='domicilioColection'>Colección con domicilio {new Intl.NumberFormat('COP').format(priceCollectionDomicilio)}</option>
+                          </Fragment>
+                        )}
                       </select>
                     </div>
-                    {value !== 'normal' && (
+                    {(value === 'domicilio' || value === 'domicilioColection') && (
                       <Fragment>
                         <div className='form-item'>
                           <label htmlFor='Ciudad'>Ciudad</label>
